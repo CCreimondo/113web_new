@@ -25,24 +25,24 @@
                     top: '0',
                     opacity: '1'
                 }, 600);
-                $(".prev").delay(900).animate({
+                $(".prev").delay(600).animate({
                     opacity: '1'
                 }, 300);
-                $(".next").delay(900).animate({
+                $(".next").delay(600).animate({
                     opacity: '1'
                 }, 300);
-                $(".achieve1").delay(600).animate({
+                $(".achieve1").delay(400).animate({
                     left: '0',
                 }, 600);
-                $(".achieve2").delay(650).animate({
+                $(".achieve2").delay(450).animate({
                     left: '0',
                 }, 670);
-                $(".achieve3").delay(700).animate({
+                $(".achieve3").delay(500).animate({
                     left: '0',
                 }, 740);
-                $(".achieve4").delay(750).animate({
+                $(".achieve4").delay(550).animate({
                     left: '0',
-                }, 710);
+                }, 810);
                 $(".nav_achieve").find("span").delay(0).animate({
                     opacity: '1'
                 }, 0)
@@ -51,29 +51,29 @@
                 $("#contact .container h1").delay(100).animate({
                     top: ['0', 'swing'],
                     opacity: '1'
-                }, 650);
+                }, 850);
                 $("#contact .container span").delay(100).animate({
                     top: ['0', 'swing'],
                     opacity: '1'
-                }, 650);
+                }, 850);
                 $(".name").delay(0).animate({
                     left: ['0', 'swing']
-                }, 300);
+                }, 400);
                 $(".email").delay(100).animate({
                     left: ['0', 'swing']
-                }, 300);
+                }, 400);
                 $(".qqnumbers").delay(160).animate({
                     left: ['0', 'swing']
-                }, 300);
+                }, 400);
                 $(".telephone").delay(220).animate({
                     left: ['0', 'swing']
-                }, 300);
+                }, 400);
                 $(".input_ideas").delay(220).animate({
                     left: ['0', 'swing']
-                }, 300);
+                }, 400);
                 $(".sub_form").delay(280).animate({
                     left: '0'
-                }, 300);
+                }, 400);
             }
         },
         onLeave: function (index, direction) {
