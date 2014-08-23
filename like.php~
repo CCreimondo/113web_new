@@ -1,0 +1,19 @@
+<?php
+   /*
+     * Handle like data
+     * /
+    /* $begin handle like data */
+    $id = $_POST["id"];
+    
+    $xmlDoc = new DOMDocument();
+    if(!$xmlDoc->load("like.xml")){echo 0; exit();}
+    
+    $like = $xmlDoc->getElementByID("like");
+    $theTarget = $like->getElementByID($id);
+    $theTargetValue = $theTarget->ChildNodes[0].nodeValue;
+    $theTargetValueNum = (int)($theTargetValue);
+    $theTargetValueNum ++;
+    $theTargetValue = $theTargetValueNum;
+    echo 1;
+    /* $end handle like data */
+?>
