@@ -2,9 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Form Submit Check</title>
-    <style>
-
-    </style>
     <script type="text/javascript">
         "use strict";
         window.onload = function () {
@@ -25,7 +22,7 @@
             xmlRequest.send();
             var xmlDoc = xmlRequest.responseXML;
 
-            document.write("<table>");
+            document.write("<table style='width: 100%; background-color: #334; color:#fb5;'>");
             var labels = ["name", "email", "qq", "phone", "sug"];
             document.write("<tr>");
             for (var index in labels) {
@@ -48,6 +45,11 @@
     </script>
 </head>
 <body>
+    <header>
 
+    </header>
+    <article id="main">
+
+    </article>
 </body>
 </html>

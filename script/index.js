@@ -14,17 +14,29 @@ function submitDataWithAjax(thetTarget, data) {
     var request = getHTTPObject();
     request.open("POST", thetTarget, true);
 
-    var code = 0;
+    //var code = undefined;
     request.onreadystatechange = function () {
         if (request.readyState == 4 && request.status == 200) {
-            var response = request.responseText;               //Type - string
-            code = parseInt(response);
+            //var response = request.responseText;               //Type - string
+            //code = parseInt(response);
+            //return true;
         } else {
-            code = 0;
+            //return false;
         }
     }
     request.send(data);
-    return code;
+    return true;
+}
+
+function resetForm() {
+    var l_form = document.getElementById("l_form");
+    var inputs = l_form.getElementsByClassName("lform");
+    var r_form = document.getElementById("r_form");
+    var sug = r_form.getElementsByClassName("input_ideas")[0];
+    for (var x in inputs) {
+        inputs[x].value = "";
+    }
+    sug.value = "";
 }
 
 function resetBlank(whichBlank) {
@@ -36,19 +48,32 @@ function resetBlank(whichBlank) {
  */
 function formSubmit() {
     var labels = ["name", "email", "qq", "phone", "sug"];
+    var placeholder = ["Your Name", "Your Email", "Your QQ numbers", "Your Telephone"];
     var data = new FormData();
 
     var l_form = document.getElementById("l_form");
     var inputs = l_form.getElementsByClassName("lform");
     var x;
     for (x in inputs) {
+        if (inputs[x].value == "") {
+            inputs[x].placeholder = labels[x].replace(/(^|\s+)\w/g, function (s) { return s.toUpperCase(); }) + " required!";
+            resetBlank(inputs[x]);
+            inputs[x].onfocus = function () {
+                this.placeholder = placeholder[x];
+            }
+            return false;
+        }
         /* isEmail */
         if (labels[x] == "email") {
             var email = inputs[x].value;
             var hasAt = email.indexOf("@") > -1;
             var hasDot = email.indexOf(".") > -1;
             if (!hasAt || !hasDot) {
+                inputs[x].placeholder = "Incorrect format!";
                 resetBlank(inputs[x]);
+                inputs[x].onfocus = function () {
+                    this.placeholder = placeholder[x];
+                }
                 return false;
             }
         }
@@ -62,11 +87,13 @@ function formSubmit() {
     //alert(sug);
 
     var xhr = submitDataWithAjax("form.php", data);
+    if (xhr == 1) { alert("Commit successfully."); }
     /*
      * Code: 1 - success, 0 - failed
      * IF 1 alert success, IF 0 alert again
      */
-    //function prepareForm();
+    resetForm();
+
     return false;
 }
 
