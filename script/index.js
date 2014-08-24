@@ -1,4 +1,9 @@
-﻿function getHTTPObject() {
+﻿/*
+ * Hehe, serious not want to add comment. Let it go.
+ */
+
+
+function getHTTPObject() {
     if (XMLHttpRequest) {
         return new XMLHttpRequest();
     } else if (ActiveXObject) {
@@ -49,12 +54,17 @@ function resetBlank(whichBlank) {
 function formSubmit() {
     var labels = ["name", "email", "qq", "phone", "sug"];
     var placeholder = ["Your Name", "Your Email", "Your QQ numbers", "Your Telephone"];
-    var data = new FormData();
 
+    /*
+     * FormData - Organize form data.
+     */
+    /* begin Formdata */
+    var data = new FormData();
     var l_form = document.getElementById("l_form");
     var inputs = l_form.getElementsByClassName("lform");
     var x;
     for (x in inputs) {
+        /* Input required */
         if (inputs[x].value == "") {
             inputs[x].placeholder = labels[x].replace(/(^|\s+)\w/g, function (s) { return s.toUpperCase(); }) + " required!";
             resetBlank(inputs[x]);
@@ -77,21 +87,49 @@ function formSubmit() {
                 return false;
             }
         }
+        /* isQQ */
+        if (labels[x] == "qq") {
+            var qq = inputs[x].value;
+            var prtn = /^\d{5,11}$/;
+            if (!prtn.test(qq)) {
+                inputs[x].placeholder = "Invalid qq!";
+                resetBlank(inputs[x]);
+                inputs[x].onfocus = function () {
+                    this.placeholder = placeholder[x];
+                }
+                return false;
+            }
+        }
+        /* isPhoneNumber */
+        if (labels[x] == "phone") {
+            var phone = inputs[x].value;
+            var prtn = /^\d{11}$/;
+            if (!prtn.test(phone)) {
+                inputs[x].placeholder = "Invalide phone number!";
+                resetBlank(inputs[x]);
+                inputs[x].onfocus = function () {
+                    this.placeholder = placeholder[x];
+                }
+                return false;
+            }
+        }
 
         data.append(labels[x], inputs[x].value);
     }
 
     var r_form = document.getElementById("r_form");
-    var sug = r_form.getElementsByClassName("input_ideas")[0].value;
+    var theInput = r_form.getElementsByClassName("input_ideas")[0];
+    var sug = theInput.value;
+    /* Replace illegal char. */
+    var prtn = /[<>"'\\/]/g;
+    sug.replace(prtn, " ");
+
     data.append(labels[4], sug);
     //alert(sug);
+    /* end FormData */
 
     var xhr = submitDataWithAjax("form.php", data);
     if (xhr == 1) { alert("Commit successfully."); }
-    /*
-     * Code: 1 - success, 0 - failed
-     * IF 1 alert success, IF 0 alert again
-     */
     resetForm();
 
     return false;
