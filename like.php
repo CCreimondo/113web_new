@@ -42,10 +42,10 @@
         $theValue = (int)($theTarget->nodeValue);
         $theValue++;
         $theTarget->nodeValue = $theValue;
+        echo $theValue;
         break;
       }
     }
     $xmlDoc->save("like.xml");
-    echo 1;
     /* $end handle like data */
 ?>

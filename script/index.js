@@ -22,9 +22,9 @@ function submitDataWithAjax(thetTarget, data) {
     //var code = undefined;
     request.onreadystatechange = function () {
         if (request.readyState == 4 && request.status == 200) {
-            //var response = request.responseText;               //Type - string
-            //code = parseInt(response);
-            //return true;
+            var response = request.responseText;               //Type - string
+            code = parseInt(response);
+            return code;
         } else {
             //return false;
         }
