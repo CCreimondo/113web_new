@@ -1,5 +1,6 @@
 ﻿/*
  * Hehe, serious not want to add comment. Let it go.
+ * Synchronous. 
  */
 
 
@@ -17,20 +18,25 @@ function getHTTPObject() {
 
 function submitDataWithAjax(thetTarget, data) {
     var request = getHTTPObject();
+    /* Synchronous */
+    request.open("POST", thetTarget, false);
+    request.send(data);
+    var response = request.responseText;
+    var code = parseInt(response);
+    return code;
+    /* Asynchronous */
+    /*
     request.open("POST", thetTarget, true);
-
-    //var code = undefined;
     request.onreadystatechange = function () {
         if (request.readyState == 4 && request.status == 200) {
             var response = request.responseText;               //Type - string
             code = parseInt(response);
-            return code;
         } else {
-            //return false;
+            return 0;
         }
     }
     request.send(data);
-    return true;
+    */
 }
 
 function resetForm() {
@@ -144,6 +150,9 @@ function likeSubmit(name) {
 
     var xhr = submitDataWithAjax("like.php", data);
     //More detail code write here
+    var theTarget = document.getElementById(name);
+    theTarget.innerHTML = xhr;
+    //alert(xhr);
 
     return false;
 }

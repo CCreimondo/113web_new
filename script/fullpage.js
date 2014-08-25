@@ -1,5 +1,49 @@
 ﻿$(document).ready(function () {
 
+    /*
+     * Initial like count in the first time.
+     * Seem that asynchronous doesn't meaningful.
+     */
+    
+    /* Simple and crude! */
+    if (XMLHttpRequest) {
+        var xhr = new XMLHttpRequest();
+    } else {
+        //IE version >= IE7
+        var xhr = new ActiveXObject("Msxml2.XMLHTTP");
+    }
+    xhr.open("GET", "like.xml", false);
+    xhr.send();
+    var xml = xhr.responseXML;
+    var works = xml.getElementsByTagName("work");
+    var x;
+    for (x in works) {
+        var attrs = works[x].attributes;
+        var theName = attrs[0].value;
+        var theTarget = document.getElementById(theName);
+        theTarget.innerHTML = works[x].nodeValue;
+    }
+    /* Method not allowed! */
+    /*
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "like.xml", true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var response = xhr.responseXML;
+            //var works = response.documentElement.getElementsByTagName("work");
+            var works = response.getElementsByTagName("work");
+            var x;
+            for (works in x) {
+                var theName = works[x].getAttribute("name");
+                var theTarget = document.getElementById(theName);
+                theTarget.innerHTML = works[x].nodeValue;
+                alert(works[x].nodeValue);
+            }
+        }
+    }
+    xhr.send();
+    */
+
     $.fn.fullpage({
         slidesColor: ['#1bbc9b', '#4BBFC3', '#FFFFFF', '#f90'],
         anchors: ['page1', 'page2', 'page3', 'page4'],
