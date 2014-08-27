@@ -50,7 +50,7 @@
         slidesColor: ['#1bbc9b', '#4BBFC3', '#FFFFFF', '#f90'],
         anchors: ['page1', 'page2', 'page3', 'page4'],
         navigation: true,
-        afterLoad: function(anchorLink, index) {
+        afterLoad: function (anchorLink, index) {
             if (index == 2) {
 
             }
@@ -65,7 +65,7 @@
                     bottom: ['-290px', 'swing']
                 }, 400);
                 $("#baiban").find("img").animate({
-                    bottom: ['-420px', 'swing']
+                    bottom: ['-350px', 'swing']
                 }, 400);
                 $(".text").delay(300).animate({
                     top: '0',
@@ -77,19 +77,22 @@
                 $(".next").delay(600).animate({
                     opacity: '1'
                 }, 300);
-                $(".achieve1").delay(400).animate({
+                $(".like").delay(800).animate({
+                    opacity: '1'
+                }, 300);
+                $(".achieve1").delay(0).animate({
                     left: '0',
                 }, 600);
-                $(".achieve2").delay(450).animate({
+                $(".achieve2").delay(50).animate({
                     left: '0',
                 }, 670);
-                $(".achieve3").delay(500).animate({
+                $(".achieve3").delay(100).animate({
                     left: '0',
                 }, 740);
-                $(".achieve4").delay(550).animate({
+                $(".achieve4").delay(150).animate({
                     left: '0',
                 }, 810);
-                $(".nav_achieve").find("span").delay(0).animate({
+                $(".nav_achieve").find("span").delay().animate({
                     opacity: '1'
                 }, 0)
             }
@@ -105,19 +108,19 @@
                 $(".name").delay(0).animate({
                     left: ['0', 'swing']
                 }, 400);
-                $(".email").delay(100).animate({
+                $(".email").delay(60).animate({
                     left: ['0', 'swing']
                 }, 400);
-                $(".qqnumbers").delay(160).animate({
+                $(".qqnumbers").delay(120).animate({
                     left: ['0', 'swing']
                 }, 400);
-                $(".telephone").delay(220).animate({
+                $(".telephone").delay(180).animate({
                     left: ['0', 'swing']
                 }, 400);
-                $(".input_ideas").delay(220).animate({
+                $(".input_ideas").delay(180).animate({
                     left: ['0', 'swing']
                 }, 400);
-                $(".sub_form").delay(280).animate({
+                $(".sub_form").delay(240).animate({
                     left: '0'
                 }, 400);
             }
@@ -149,47 +152,50 @@
                 $(".next").delay(600).animate({
                     opacity: '0'
                 }, 0);
+                $(".like").delay(600).animate({
+                    opacity: '0'
+                }, 0);
                 $(".achieve1").delay(600).animate({
-                    left: '602px',
+                    left: '502px',
                 }, 0);
                 $(".achieve2").delay(600).animate({
-                    left: '568px',
+                    left: '468px',
                 }, 0);
                 $(".achieve3").delay(600).animate({
-                    left: '534px',
+                    left: '434px',
                 }, 0);
                 $(".achieve4").delay(600).animate({
-                    left: '500px',
+                    left: '400px',
                 }, 0);
                 $(".nav_achieve").find("span").delay(600).animate({
                     opacity: '0'
                 }, 90)
             }
             if (index == '4') {
-                $("#contact .container h1").delay(600).animate({
+                $("#contact .container h1").delay(100).animate({
                     top: ['-50px', 'swing'],
                     opacity: '0'
-                }, 600);
-                $("#contact .container span").delay(600).animate({
+                }, 850);
+                $("#contact .container span").delay(100).animate({
                     top: ['-50px', 'swing'],
                     opacity: '0'
-                }, 600);
-                $(".name").delay(600).animate({
+                }, 850);
+                $(".name").delay(240).animate({
                     left: '1000px'
                 }, 400);
-                $(".email").delay(600).animate({
+                $(".email").delay(180).animate({
                     left: '1000px'
                 }, 400);
-                $(".qqnumbers").delay(600).animate({
+                $(".qqnumbers").delay(120).animate({
                     left: '1000px'
                 }, 400);
-                $(".telephone").delay(600).animate({
+                $(".telephone").delay(60).animate({
                     left: '1000px'
                 }, 400);
-                $(".input_ideas").delay(600).animate({
+                $(".input_ideas").delay(60).animate({
                     left: '1000px'
                 }, 400);
-                $(".sub_form").delay(600).animate({
+                $(".sub_form").delay(0).animate({
                     left: '1000px'
                 }, 400);
             }
