@@ -6,6 +6,7 @@
      */
     
     /* Simple and crude! */
+    /*
     if (XMLHttpRequest) {
         var xhr = new XMLHttpRequest();
     } else {
@@ -23,6 +24,7 @@
         var theTarget = document.getElementById(theName);
         theTarget.innerHTML = works[x].nodeValue;
     }
+    *
     /* Method not allowed! */
     /*
     var xhr = new XMLHttpRequest();
