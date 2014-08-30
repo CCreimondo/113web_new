@@ -150,9 +150,15 @@ function likeSubmit(name) {
 
     var xhr = submitDataWithAjax("like.php", data);
     //More detail code write here
-    var theTarget = document.getElementById(name);
+    var targets = document.getElementsByClassName("likenumbers");
+    var labels = ["csong", "sss", "pigeon", "wb"];
+    var x, theTarget;
+    for (x in targets) {
+        if (labels[x] == name) {
+            theTarget = targets[x];
+        }
+    }
     theTarget.innerHTML = xhr;
-    //alert(xhr);
 
     return false;
 }
