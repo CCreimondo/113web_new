@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Form Submit Check</title>
+    <script type="text/javascript">
+        "use strict";
+        window.onload = function () {
+            function getHTTPObject() {
+                if (XMLHttpRequest) {
+                    return new XMLHttpRequest();
+                } else if (ActiveXObject) {
+                    try { return new ActiveXObject("Msxml2.XMLHTTP"); }
+                    catch (e) {
+                        try { return new ActiveXObject("Microsoft.XMLHTTP"); }
+                        catch (e) { }
+                    }
+                } else { return false; }
+            }
+
+            var xmlRequest = getHTTPObject();
+            xmlRequest.open("GET", "formInfo.xml", false);
+            xmlRequest.send();
+            var xmlDoc = xmlRequest.responseXML;
+
+            document.write("<table style='width: 100%; background-color: #334; color:#fb5;'>");
+            var labels = ["name", "email", "qq", "phone", "sug"];
+            document.write("<tr>");
+            for (var index in labels) {
+                document.write("<td>" + labels[index] + "</td>");
+            }
+            document.write("</tr>");
+
+            var person = xmlDoc.getElementsByTagName("person");
+            for (var index in person) {
+                var thePerson = person[index];
+                document.write("<tr>");
+                for (var x in labels) {
+                    var theTarget = thePerson.getElementsByTagName(labels[x])[0].childNodes[0];
+                    document.write("<td>" + theTarget.nodeValue +"</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+    </script>
+</head>
+<body>
+    <header>
+
+    </header>
+    <article id="main">
+
+    </article>
+</body>
+</html>

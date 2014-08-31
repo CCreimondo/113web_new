@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript">
+      var sUserAgent = navigator.userAgent;
+      var fAppVersion = parseFloat(navigator.appVersion);
+      var isOprea = sUserAgent.indexOf("Opera") > -1;
+      var isIE = sUserAgent.indexOf("compatible") > -1
+      && sUserAgent.indexOf("MSIE") > -1
+      && !isOprea;
+
+      function innerHtml() {
+          window.location.href = "attention.html";
+      }
+
+      if (isIE) {
+          var reIE = new RegExp("MSIE (\\d+\\.\\d+)");
+          reIE.test(sUserAgent);
+          var FIEVersion = parseFloat(RegExp["$1"]);
+          if (FIEVersion <= 9) {
+              innerHtml();
+          }
+      }
+  </script>
+  <!--<script src="script/checkBrowser.js"></script>-->
+  <link rel="stylesheet" href="stylesheet/jquery.fullPage.css" />
+  <link rel="stylesheet" href="stylesheet/index.css" />
+  <script src="script/index.js"></script>
+  <script src="script/jquery-1.8.3.min.js"></script>
+  <script src="script/jquery-ui-1.10.3.min.js"></script>
+  <script src="script/jquery.fullPage.min.js"></script>
+  <script src="script/fullpage.js"></script>
+</head>
+<body>
+
+  <div id="homepage" class="section"></div>
+  <div id="members" class="section">
+    <div class="membersContainer">
+      <div class="allphotos">
+        <div class="headphoto">
+          <img class="cover" src="images/headphotos/cover.png" />
+          <img class="human" src="images/headphotos/2010俞荟_03.png" />
+        </div>
+        <div class="headphoto">
+          <img class="cover" src="images/headphotos/cover.png" />
+          <img class="human" src="images/headphotos/2010俞荟_03.png" />
+        </div>
+        <div class="headphoto">
+          <img class="cover" src="images/headphotos/cover.png" />
+          <img class="human" src="images/headphotos/2010俞荟_03.png" />
+        </div>
+        <div class="headphoto" style="margin-right: 0;">
+          <img class="cover" src="images/headphotos/cover.png" />
+          <img class="human" src="images/headphotos/2010俞荟_03.png" />
+        </div>
+        <div class="headphoto">
+          <img class="cover" src="images/headphotos/cover.png" />
+          <img class="human" src="images/headphotos/2010俞荟_03.png" />
+        </div>
+        <div class="headphoto">
+          <img class="cover" src="images/headphotos/cover.png" />
+          <img class="human" src="images/headphotos/2010俞荟_03.png" />
+        </div>
+        <div class="headphoto">
+          <img class="cover" src="images/headphotos/cover.png" />
+          <img class="human" src="images/headphotos/2010俞荟_03.png" />
+        </div>
+        <div class="headphoto" style="margin-right: 0;">
+          <img class="cover" src="images/headphotos/cover.png" />
+          <img class="human" src="images/headphotos/2010俞荟_03.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="achievement" class="section">
+    <div class="prev"></div>
+    <div class="next"></div>
+    <div id="windows">
+      <div class="container">
+        <div id="CSong" class="achieve">
+          <div class="text">
+            <h1>CSong</h1>
+            <div class="designer">设计者：刘虓豪 周雨涵 余荟 蒋宇寰</div>
+            <div class="detail">Pigeon，一款App。它能够帮助人们之间实时共享位置信息。在室内，Pigeon可以记住你的行进路径并共享给好友，帮助他们找到你。同时，用户通过Pigeon可以帮助绘制室内地图。系统建立了行走模型的定性方式，加速度设定阈值进行分析得到步数，同时对行走过程中电子罗盘方向值进行限定误差合成，最终得到用户的行走轨迹,从而实现室内导航的功能。</div>
+            <div class="like">
+              <div class="likebuttun" onclick="return likeSubmit('csong');">
+                <p>赞</p>
+              </div>
+              <span class="likenumbers">555</span>
+            </div>
+            <div class="honour"><span></span>2014 ImageCup 中国赛区二等奖</div>
+          </div>
+          <img class="CSongimg" src="images/CSong.jpg" />
+        </div>
+        <div id="SSS" class="achieve">
+          <div class="text">
+            <h1>全国社会保险精算分享系统</h1>
+            <div class="designer">设计者:程逸蒙 黄磊 吕琳洁 范焘</div>
+            <div class="detail">IBM smart social security解决方案致力于帮助社保机构更加智慧地管理全国社保数据和精算模型，实现对风险的评估以及对未来收支的预测和分析，为我国社保制度的建立、改革以及修订提供可靠的依据。</div>
+            <div class="like">
+              <div class="likebuttun" onclick="return likeSubmit('sss');">
+                <p>赞</p>
+              </div>
+              <span class="likenumbers">555</span>
+            </div>
+            <div class="honour"><span></span>2013 IMB Power比赛一等奖</div>
+            <div class="honour"><span></span>2013 IBM Mainframe比赛二等奖</div>
+          </div>
+          <img class="SSSimg" src="images/SSS.jpg" />
+        </div>
+        <div id="Pigeon" class="achieve">
+          <div class="text">
+            <h1>Pigeon</h1>
+            <div class="designer">设计者：刘虓豪 周雨涵 余荟 蒋宇寰</div>
+            <div class="detail">Pigeon，一款App。它能够帮助人们之间实时共享位置信息。在室内，Pigeon可以记住你的行进路径并共享给好友，帮助他们找到你。同时，用户通过Pigeon可以帮助绘制室内地图。系统建立了行走模型的定性方式，加速度设定阈值进行分析得到步数，同时对行走过程中电子罗盘方向值进行限定误差合成，最终得到用户的行走轨迹,从而实现室内导航的功能。</div>
+            <div class="like">
+              <div class="likebuttun" onclick="return likeSubmit('pigeon');">
+                <p>赞</p>
+              </div>
+              <span class="likenumbers">555</span>
+            </div>
+            <div class="honour"><span></span>2013 ImageCup 中国赛区一等奖</div>
+          </div>
+          <img class="Pigeonimg" src="images/Pigeon.jpg" />
+        </div>
+        <div id="baiban" class="achieve">
+          <div class="text">
+            <h1>白&nbsp;&nbsp;&nbsp;&nbsp;板</h1>
+            <div class="designer">设计者：刘子谊 严城华 米文卓 罗娅 叶虹江 杨子辰</div>
+            <div class="detail">白板是一个基于地图的分享App，将地图想象为一块白板，所有用户都能自由地向这块白板上贴各种类型的信息纸条。与过去信息分享类软件以列表为主要查看模式相比，白板中用户查看纸条的主模式是地图，使信息分享更加直观有趣。白板不仅能在用户所在的地方分享信息，还能够将想分享的东西扔向其他地方。评论、点赞、关注等内容的加入更是使用户交流更加便捷。白板，让生活变得简单！</div>
+            <div class="like">
+              <div class="likebuttun" onclick="return likeSubmit('wb');">
+                <p>赞</p>
+              </div>
+              <span class="likenumbers">555</span>
+            </div>
+            <div class="honour"><span></span>2013重庆市大学生移动创新大赛二等奖</div>
+          </div>
+          <img class="baibanimg" src="images/baiban.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="nav_achieve">
+      <ul>
+        <li><span class="achieve1">1</span></li>
+        <li><span class="achieve2">2</span></li>
+        <li><span class="achieve3">3</span></li>
+        <li><span class="achieve4">4</span></li>
+      </ul>
+    </div>
+  </div>
+  <div id="contact" class="section">
+    <div id="inner">
+      <div class="container">
+        <h1>CONTACT US</h1>
+        <span>
+          If you want to become one of us , please contact us by finishing the form
+          .
+        </span>
+        <form id="contact-form" action="#" method="post">
+          <div id="l_form">
+            <input class="lform name" placeholder="Your Name" required type="text">
+            <input class="lform email" placeholder="Your Email" required type="text">
+            <input class="lform qqnumbers" placeholder="Your QQ numbers" required type="text">
+            <input class="lform telephone" placeholder="Your Telephone" required type="text">
+          </div>
+          <div id="r_form">
+            <textarea class="input_ideas" placeholder="Why you want to join us?" required></textarea>
+            <input class="sub_form" type="submit" value="Send It Away!" onclick="return formSubmit();">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      /* Simple and crude! */
+      if (XMLHttpRequest) {
+          var xhr = new XMLHttpRequest();
+      } else {
+          //IE version >= IE7
+          var xhr = new ActiveXObject("Msxml2.XMLHTTP");
+      }
+      xhr.open("GET", "like.xml", false);
+      xhr.send();
+      var xml = xhr.responseXML;
+      var works = xml.getElementsByTagName("work");
+      var targets = document.getElementsByClassName("likenumbers");
+      for (var x = 0; x < 4; ++x) {
+          targets[x].innerHTML = works[x].childNodes[0].nodeValue;
+      }
+  </script>
+</body>
+</html>
