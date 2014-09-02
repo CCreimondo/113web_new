@@ -2,7 +2,7 @@
  * Hehe, serious not want to add comment. Let it go.
  * Synchronous. 
  */
-
+ 
 
 function getHTTPObject() {
     if (XMLHttpRequest) {
@@ -59,7 +59,7 @@ function resetBlank(whichBlank) {
  */
 function formSubmit() {
     var labels = ["name", "email", "qq", "phone", "sug"];
-    var placeholder = ["Your Name", "Your Email", "Your QQ numbers", "Your Telephone"];
+    var placeholder = ["Your Name", "Your Email", "Your QQ numbers", "Your Telephone", "Why you want to join us?"];
 
     /*
      * FormData - Organize form data.
@@ -68,7 +68,7 @@ function formSubmit() {
     var data = new FormData();
     var l_form = document.getElementById("l_form");
     var inputs = l_form.getElementsByClassName("lform");
-    var x;
+    var x = undefined;
     for (x in inputs) {
         /* Input required */
         if (inputs[x].value == "") {
@@ -126,6 +126,15 @@ function formSubmit() {
     var r_form = document.getElementById("r_form");
     var theInput = r_form.getElementsByClassName("input_ideas")[0];
     var sug = theInput.value;
+    /* Check whether empty */
+    if(sug == "") {
+        theInput.placeholder = "Reasons required!";
+        resetBlank(theInput);
+        theInput.onfocus = function(){
+            this.placeholder = placeholder[4];
+        }
+        return false;
+    }
     /* Replace illegal char. */
     var prtn = /[<>"'\\/]/g;
     sug.replace(prtn, " ");
@@ -134,7 +143,7 @@ function formSubmit() {
     //alert(sug);
     /* end FormData */
 
-    var xhr = submitDataWithAjax("form.php", data);
+    var xhr = submitDataWithAjax("php/form.php", data);
     if (xhr == 1) { alert("Commit successfully."); }
     resetForm();
 
@@ -148,7 +157,7 @@ function likeSubmit(name) {
     var data = new FormData();
     data.append("name", name);
 
-    var xhr = submitDataWithAjax("like.php", data);
+    var xhr = submitDataWithAjax("php/like.php", data);
     //More detail code write here
     var targets = document.getElementsByClassName("likenumbers");
     var labels = ["csong", "sss", "pigeon", "wb"];
