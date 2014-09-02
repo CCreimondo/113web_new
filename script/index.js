@@ -143,7 +143,7 @@ function formSubmit() {
     //alert(sug);
     /* end FormData */
 
-    var xhr = submitDataWithAjax("php/form.php", data);
+    var xhr = submitDataWithAjax("form.php", data);
     if (xhr == 1) { alert("Commit successfully."); }
     resetForm();
 
@@ -157,7 +157,7 @@ function likeSubmit(name) {
     var data = new FormData();
     data.append("name", name);
 
-    var xhr = submitDataWithAjax("php/like.php", data);
+    var xhr = submitDataWithAjax("like.php", data);
     //More detail code write here
     var targets = document.getElementsByClassName("likenumbers");
     var labels = ["csong", "sss", "pigeon", "wb"];
