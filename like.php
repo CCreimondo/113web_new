@@ -4,32 +4,8 @@
      * Handle like data
      * /
 
-    /*
-    $labels = array("csong", "sss", "pigeon", "wb");
-    
-    $xmlDoc = new DOMDocument();
-    $xmlDoc->validateOnParse = true;
-    if(!$xmlDoc->load("like.xml")){echo 0; exit();}
-    
-    //echo $xmlDoc->saveXML();
-    $theTargets = $xmlDoc->getElementsByTagName("work");
-    $_size = $theTargets->length;
-    for($i=0; $i<$_size; $i++){
-        $theTargets[$i]->setAttribute("id", $labels[$i]);
-    }
-    
-    $id = $_POST["id"];
-    $theTarget = $xmlDoc->getElementById($id);
-    $theTargetValue = $theTarget->nodeValue;
-    $theTargetValueNum = (int)($theTargetValue);
-    $theTargetValueNum ++;
-    $theTarget->nodeValue = $theTargetValueNum;
-    
-    $xmlDoc->save("like.xml");
-    echo 1;
-    */
-    
     /* $begin handle like data */    
+    if (empty($_POST["name"])) { die(); } 
     $name = $_POST["name"];
     
     $xmlDoc = new DOMDocument();

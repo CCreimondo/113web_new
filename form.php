@@ -1,7 +1,15 @@
 ﻿<?php
     date_default_timezone_set("PRC");
+    
+        /* Check whether the value is empty */
+	$isEmpty = empty($_POST["name"])
+	         ||empty($_POST["email"])
+	 	 ||empty($_POST["qq"])
+	         ||empty($_POST["phone"])
+		 ||empty($_POST["sug"]);
+	if ($isEmpty) { die(); }
 
-    if(!$name = $_POST["name"]) {$name = "none";}
+        if(!$name = $_POST["name"]) {$name = "none";}
 	if(!$email = $_POST["email"]) {$email = "none";}
 	if(!$qq = $_POST["qq"]) {$qq = "0";}
 	if(!$phone = $_POST["phone"]) {$phone = "0";}
