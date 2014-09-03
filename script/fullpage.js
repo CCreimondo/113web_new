@@ -13,36 +13,36 @@
                 }, 200);
 
                 $(".row_1_1").delay(0).animate({
-                    left: ['0', 'linear']
+                    left: ['0', 'swing']
                  //   top: ['0', 'linear']
                 }, 600);
                 $(".row_1_2").delay(200).animate({
-                    left: ['200px', 'linear']
+                    left: ['200px', 'swing']
                    // top: ['0', 'linear']
                 }, 400);
                 $(".row_1_3").delay(400).animate({
-                    left: ['400px', 'linear']
+                    left: ['400px', 'swing']
                    // top: ['0', 'linear']
                 }, 200);
                 $(".row_1_4").delay(600).animate({
-                    left: ['600px', 'linear']
+                    left: ['600px', 'swing']
                   //  top: ['0', 'linear']
                 }, 0);
 
                 $(".row_2_1").delay(200).animate({
-                    left: ['0', 'linear']
+                    left: ['0', 'swing']
                   //  top: ['200px', 'linear']
                 }, 600);
                 $(".row_2_2").delay(400).animate({
-                    left: ['200px', 'linear']
+                    left: ['200px', 'swing']
                  //   top: ['200px', 'linear']
                 }, 400);
                 $(".row_2_3").delay(600).animate({
-                    left: ['400px', 'linear']
+                    left: ['400px', 'swing']
                  //   top: ['200px', 'linear']
                 }, 200);
                 $(".row_2_4").delay(800).animate({
-                    left: ['600px', 'linear']
+                    left: ['600px', 'swing']
                   //  top: ['200px', 'linear']
                 }, 0);
             }
