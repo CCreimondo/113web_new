@@ -318,6 +318,45 @@
                 left: [-AnAchieveWidth * 3, 'swing']
             }, 700);
         change(-AnAchieveWidth * 3);
-    });  
-    
+    });
+
+    //switch members
+    /*
+    $(".nav_members_1").click(function () {
+        $(".hp_1").addClass("test");
+        $(".photos_1").animate({opacity: '1'}, 0).delay(800).hide();
+        $(".photos_2").animate({ opacity: '1' }, 0).delay(800).show();
+        $(".hp_2").animate({ opacity: '1' }, 0).delay(800).removeClass("test");
+    });
+    $(".nav_members_2").click(function () {
+        $(".hp_2").addClass("test");
+        $(".photos_1").animate({}, 0).delay(800).show();
+        $(".photos_2").animate({}, 0).delay(800).hide();
+        $(".hp_1").animate({}, 0).delay(800).removeClass("test");
+    })
+
+    ratate is failwoy
+    */
+
+    $(".nav_members_1").click(function () {
+        $(".photos_1").animate({
+            opacity: '0'
+        }, 600);
+        $(".photos_1").css("z-index", "9");
+        $(".photos_2").delay(300).animate({
+            opacity: '1'
+        }, 600);
+        $(".photos_2").css("z-index", "10");
+    });
+
+    $(".nav_members_2").click(function () {
+        $(".photos_2").animate({
+            opacity: '0'
+        }, 600);
+        $(".photos_2").css("z-index", "9");
+        $(".photos_1").delay(300).animate({
+            opacity: '1'
+        }, 600);
+        $(".photos_1").css("z-index", "10");
+    });
 });
