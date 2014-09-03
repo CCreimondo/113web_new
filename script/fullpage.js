@@ -7,7 +7,46 @@
         afterLoad: function (anchorLink, index) {
             if (index == 2) {
 
+                $(".row_1").delay().animate({
+                    left: ['600px', 'linear'],
+                    top: ['0', 'linear']
+                }, 200);
+
+                $(".row_1_1").delay(0).animate({
+                    left: ['0', 'linear']
+                 //   top: ['0', 'linear']
+                }, 600);
+                $(".row_1_2").delay(200).animate({
+                    left: ['200px', 'linear']
+                   // top: ['0', 'linear']
+                }, 400);
+                $(".row_1_3").delay(400).animate({
+                    left: ['400px', 'linear']
+                   // top: ['0', 'linear']
+                }, 200);
+                $(".row_1_4").delay(600).animate({
+                    left: ['600px', 'linear']
+                  //  top: ['0', 'linear']
+                }, 0);
+
+                $(".row_2_1").delay(200).animate({
+                    left: ['0', 'linear']
+                  //  top: ['200px', 'linear']
+                }, 600);
+                $(".row_2_2").delay(400).animate({
+                    left: ['200px', 'linear']
+                 //   top: ['200px', 'linear']
+                }, 400);
+                $(".row_2_3").delay(600).animate({
+                    left: ['400px', 'linear']
+                 //   top: ['200px', 'linear']
+                }, 200);
+                $(".row_2_4").delay(800).animate({
+                    left: ['600px', 'linear']
+                  //  top: ['200px', 'linear']
+                }, 0);
             }
+
             if (index == 3) {
                 $("#CSong").find("img").animate({
                     bottom: ['-45px', 'swing']
@@ -50,6 +89,7 @@
                     opacity: '1'
                 }, 0)
             }
+
             if (index == 4) {
                 $("#contact .container h1").delay(100).animate({
                     top: ['0', 'swing'],
@@ -81,7 +121,44 @@
         },
         onLeave: function (index, direction) {
             if (index == '2') {
+                $(".row_1_1").delay().animate({
+                    left: ['600px', 'linear'],
+                    top: ['200px', 'linear']
+                }, 300);
+                $(".row_1_2").delay().animate({
+                    left: ['600px', 'linear'],
+                    top: ['200px', 'linear']
+                }, 300);
+                $(".row_1_3").delay().animate({
+                    left: ['600px', 'linear'],
+                    top: ['200px', 'linear']
+                }, 300);
+                $(".row_1_4").delay().animate({
+                    left: ['600px', 'linear'],
+                    top: ['200px', 'linear']
+                }, 300);
 
+                $(".row_2_1").delay().animate({
+                    left: ['600px', 'linear'],
+                    top: ['200px', 'linear']
+                }, 300);
+                $(".row_2_2").delay().animate({
+                    left: ['600px', 'linear'],
+                    top: ['200px', 'linear']
+                }, 300);
+                $(".row_2_3").delay().animate({
+                    left: ['600px', 'linear'],
+                    top: ['200px', 'linear']
+                }, 300);
+                $(".row_2_4").delay().animate({
+                    left: ['600px', 'linear'],
+                    top: ['200px', 'linear']
+                }, 300);
+
+                //$(".row_1").delay(150).animate({
+                //    left: ['600px', 'linear'],
+                //    top: ['200px', 'linear']
+                //}, 40);
             }
             if (index == '3') {
                 $("#CSong").find("img").delay(600).animate({
@@ -293,24 +370,52 @@
     */
 
     $(".nav_members_1").click(function () {
-        $(".photos_1").animate({
+        $(".hp_1").animate({
             opacity: '0'
-        }, 600);
-        $(".photos_1").css("z-index", "9");
-        $(".photos_2").delay(300).animate({
+        }, 600); 
+        $(".hp_2").delay(300).animate({
             opacity: '1'
         }, 600);
+        $(".photos_1").css("z-index", "9");
         $(".photos_2").css("z-index", "10");
+        $(".photos_3").css("z-index", "9");
+        $(".photos_4").css("z-index", "9");
     });
 
     $(".nav_members_2").click(function () {
-        $(".photos_2").animate({
+        $(".hp_2").animate({
             opacity: '0'
         }, 600);
+        $(".hp_3").delay(300).animate({
+            opacity: '1'
+        }, 600);
+        $(".photos_1").css("z-index", "9");
         $(".photos_2").css("z-index", "9");
-        $(".photos_1").delay(300).animate({
+        $(".photos_3").css("z-index", "10");
+        $(".photos_4").css("z-index", "9");
+    });
+    $(".nav_members_3").click(function () {
+        $(".hp_3").animate({
+            opacity: '0'
+        }, 600);
+        $(".hp_4").delay(300).animate({
+            opacity: '1'
+        }, 600);
+        $(".photos_1").css("z-index", "9");
+        $(".photos_2").css("z-index", "9");
+        $(".photos_3").css("z-index", "9");
+        $(".photos_4").css("z-index", "10");
+    });
+    $(".nav_members_4").click(function () {
+        $(".hp_4").animate({
+            opacity: '0'
+        }, 600);
+        $(".hp_1").delay(300).animate({
             opacity: '1'
         }, 600);
         $(".photos_1").css("z-index", "10");
+        $(".photos_2").css("z-index", "9");
+        $(".photos_3").css("z-index", "9");
+        $(".photos_4").css("z-index", "9");
     });
 });
