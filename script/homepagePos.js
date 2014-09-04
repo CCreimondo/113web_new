@@ -5,8 +5,8 @@ $(document).ready(function () {
     var windowsWidth = $(window).width();
     var windowsScale = windowsWidth / windowsHeight;
 
-    var initWidth = 1600;
-    var initHeight = 912;
+    var initWidth = 2000;
+    var initHeight = 1125;
     var initScale = initWidth / initHeight;
 
     var finalWidth = 0;
@@ -32,8 +32,8 @@ $(document).ready(function () {
         var windowsWidth = $(window).width();
         var windowsScale = windowsWidth / windowsHeight;
 
-        var initWidth = 1600;
-        var initHeight = 912;
+        var initWidth = 2000;
+        var initHeight = 1125;
         var initScale = initWidth / initHeight;
 
         var finalWidth = 0;
