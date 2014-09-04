@@ -94,10 +94,12 @@ body {
 
 #homepage .pointContainer .point {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    background-image: url(/images/point.png);
-    background-size: 40px 40px;
+    width: 52px;
+    height: 49px;
+    background-image: url(/images/point_2.png);
+    background-size: 52px 49px;
+    cursor: pointer;
+    z-index: 10;
 }
 
 #homepage .home_next {
@@ -152,8 +154,8 @@ body {
 
 #members .members_title_2 {
     position: absolute;
-    width: 476px;
-    height: 45px;
+    width: 490px;
+    height: 46px;
     top: 120px;
     left: calc(50% - 38px);
     background-image: url(/images/member_title_2.png);
@@ -255,7 +257,7 @@ body {
     height: 170px;
     margin: 0 30px 30px 0;
     cursor: pointer;
-    background-image: url(/images/members_next.png);
+    background-image: url(/images/headphotos/next_5.png);
     border-radius: 50%;
 }
 
@@ -326,13 +328,28 @@ body {
 }
 
 /*achievement*/
+#achievement {
+    background-image: url(/images/achieve_BK.png);
+    background-size: 100% 100%;
+}
+
+#achievement .achieve_title {
+    position: absolute;
+    top: 28px;
+    width: 724px;
+    height: 156px;
+    left: calc(50% - 362px);
+    background-image: url(/images/achieve_title.png);
+    background-size: 724px 156px;
+    opacity: 0;
+}
+
 #achievement #windows {
     position: relative;
     width: 969px;
     height: 425px;
     border-bottom: solid 1px #EEEEEE;
-    background-color: white;
-    margin: 60px auto auto auto;
+    margin: 160px auto auto auto;
     overflow: hidden;
 }
 
@@ -426,7 +443,7 @@ body {
     margin: 30px 10px 30px 0;
     width: 16px;
     height: 16px;
-    background-image: url(/images/like_light.png);
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAb1BMVEUAAACysrKysrKysrKzs7OysrKysrK/v7+0tLSzs7OysrKzs7Ozs7OysrKysrKzs7OysrKzs7OysrKysrKzs7OysrKysrKzs7O0tLS0tLSzs7OysrKysrKzs7Ozs7OysrK7u7uysrKysrKysrKzs7OQnUa/AAAAJHRSTlMAyPj67+33CG1wcoHYrrd2/o6Cvneg2oRVZsqISU4slg917pBxI1MgAAAAWklEQVR4Xk3KVQoEQQDE0Bp3X3fJ/c+4NDRs5e9BFKuzsZLVwuRuIHEPkBs7oP9zAVgVSgHNxAodgomRa3Oz097NRUd3etLZXV51cyd3PdxP6RX8Lj5Z2L/6ASWmEgRdsdE5AAAAAElFTkSuQmCC') /*/images/like_light.png*/;
     background-repeat: no-repeat;
     float: left;
 }
@@ -547,7 +564,7 @@ body {
 #baiban img {
     position: absolute;
     right: 30px;
-    bottom: -350px;
+    bottom: -375px;
 }
 
 /*#windows:hover .baibanimg {
@@ -762,4 +779,16 @@ ul {
 .input_ideas:focus {
 	outline-color: #65B8EF;
 	border:4px solid #65B8EF ;
+}
+
+#contact #copyright {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: #EBE5DA;
+    font-family: 'Microsoft YaHei';
+    bottom: 0;
 }

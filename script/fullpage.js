@@ -58,6 +58,9 @@
             }
 
             if (index == 3) {
+                $(".achieve_title").animate({
+                    opacity: '1'
+                }, 300);
                 $("#CSong").find("img").animate({
                     bottom: ['-45px', 'swing']
                 }, 400);
@@ -68,7 +71,7 @@
                     bottom: ['-290px', 'swing']
                 }, 400);
                 $("#baiban").find("img").animate({
-                    bottom: ['-350px', 'swing']
+                    bottom: ['-375px', 'swing']
                 }, 400);
                 $(".text").delay(300).animate({
                     top: '0',
@@ -182,6 +185,9 @@
                 //}, 40);
             }
             if (index == '3') {
+                $(".achieve_title").animate({
+                    opacity: '0'
+                }, 200);
                 $("#CSong").find("img").delay(0).animate({
                     bottom: '-395px'
                 }, 400);
