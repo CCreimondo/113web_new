@@ -6,48 +6,61 @@
         navigation: true,
         afterLoad: function (anchorLink, index) {
             if (index == 2) {
+                var center_title_1 = $(window).width() / 2 - 157;
+                var center_title_2 = $(window).width() / 2 - 238;
+                $(".members_title_1").delay(100).animate({
+                    left: [center_title_1, 'swing'],
+                    opacity: '1'
+                }, 300);
+                $(".members_title_2").delay(100).animate({
+                    left: [center_title_2, 'swing'],
+                    opacity: '1'
+                }, 300);
 
                 $(".row_1").delay().animate({
                     left: ['600px', 'linear'],
                     top: ['0', 'linear']
-                }, 200);
+                }, 100);
 
                 $(".row_1_1").delay(0).animate({
                     left: ['0', 'swing']
                  //   top: ['0', 'linear']
                 }, 600);
-                $(".row_1_2").delay(200).animate({
+                $(".row_1_2").delay(100).animate({
                     left: ['200px', 'swing']
                    // top: ['0', 'linear']
                 }, 400);
-                $(".row_1_3").delay(400).animate({
+                $(".row_1_3").delay(300).animate({
                     left: ['400px', 'swing']
                    // top: ['0', 'linear']
                 }, 200);
-                $(".row_1_4").delay(600).animate({
+                $(".row_1_4").delay(500).animate({
                     left: ['600px', 'swing']
                   //  top: ['0', 'linear']
                 }, 0);
 
-                $(".row_2_1").delay(200).animate({
+                $(".row_2_1").delay(100).animate({
                     left: ['0', 'swing']
                   //  top: ['200px', 'linear']
                 }, 600);
-                $(".row_2_2").delay(400).animate({
+                $(".row_2_2").delay(300).animate({
                     left: ['200px', 'swing']
                  //   top: ['200px', 'linear']
                 }, 400);
-                $(".row_2_3").delay(600).animate({
+                $(".row_2_3").delay(500).animate({
                     left: ['400px', 'swing']
                  //   top: ['200px', 'linear']
                 }, 200);
-                $(".row_2_4").delay(800).animate({
+                $(".row_2_4").delay(700).animate({
                     left: ['600px', 'swing']
                   //  top: ['200px', 'linear']
                 }, 0);
             }
 
             if (index == 3) {
+                $(".achieve_title").animate({
+                    opacity: '1'
+                }, 300);
                 $("#CSong").find("img").animate({
                     bottom: ['-45px', 'swing']
                 }, 400);
@@ -58,7 +71,7 @@
                     bottom: ['-290px', 'swing']
                 }, 400);
                 $("#baiban").find("img").animate({
-                    bottom: ['-350px', 'swing']
+                    bottom: ['-375px', 'swing']
                 }, 400);
                 $(".text").delay(300).animate({
                     top: '0',
@@ -121,6 +134,17 @@
         },
         onLeave: function (index, direction) {
             if (index == '2') {
+                var title_1 = $(window).width() / 2 - 157 - 200;
+                var title_2 = $(window).width() / 2 - 238 + 200;
+                $(".members_title_1").delay(200).animate({
+                    left: [title_1, 'swing'],
+                    opacity: '0'
+                }, 200);
+                $(".members_title_2").delay(200).animate({
+                    left: [title_2, 'swing'],
+                    opacity: '0'
+                }, 200);
+
                 $(".row_1_1").delay().animate({
                     left: ['600px', 'linear'],
                     top: ['200px', 'linear']
@@ -161,44 +185,47 @@
                 //}, 40);
             }
             if (index == '3') {
-                $("#CSong").find("img").delay(600).animate({
+                $(".achieve_title").animate({
+                    opacity: '0'
+                }, 200);
+                $("#CSong").find("img").delay(0).animate({
                     bottom: '-395px'
                 }, 400);
-                $("#SSS").find("img").delay(600).animate({
+                $("#SSS").find("img").delay(0).animate({
                     bottom: ['-424px', 'swing']
                 }, 400);
-                $("#Pigeon").find("img").delay(600).animate({
+                $("#Pigeon").find("img").delay(0).animate({
                     bottom: ['-655px', 'swing']
                 }, 400);
-                $("#baiban").find("img").delay(600).animate({
+                $("#baiban").find("img").delay(0).animate({
                     bottom: ['-790px', 'swing']
                 }, 400);
-                $(".text").delay(600).animate({
+                $(".text").delay(0).animate({
                     top: '-50px',
                     opacity: '0'
-                }, 0);
-                $(".prev").delay(600).animate({
+                }, 400);
+                $(".prev").delay(0).animate({
                     opacity: '0'
-                }, 0);
-                $(".next").delay(600).animate({
+                }, 400);
+                $(".next").delay(0).animate({
                     opacity: '0'
-                }, 0);
-                $(".like").delay(600).animate({
+                }, 400);
+                $(".like").delay(0).animate({
                     opacity: '0'
-                }, 0);
-                $(".achieve1").delay(600).animate({
+                }, 400);
+                $(".achieve1").delay(0).animate({
                     left: '502px',
                 }, 0);
-                $(".achieve2").delay(600).animate({
+                $(".achieve2").delay(0).animate({
                     left: '468px',
                 }, 0);
-                $(".achieve3").delay(600).animate({
+                $(".achieve3").delay(0).animate({
                     left: '434px',
                 }, 0);
-                $(".achieve4").delay(600).animate({
+                $(".achieve4").delay(0).animate({
                     left: '400px',
                 }, 0);
-                $(".nav_achieve").find("span").delay(600).animate({
+                $(".nav_achieve").find("span").delay(0).animate({
                     opacity: '0'
                 }, 90)
             }

@@ -1,4 +1,9 @@
-﻿body {
+﻿@font-face {
+    font-family: "FangZheng";
+    src: url(/font/方正兰亭超细黑简体.TTF);
+}
+
+body {
 }
 
 #homepage .homepageContainer {
@@ -23,14 +28,15 @@
     top: 0;
     width: 100%;
     height : 70px;
-    background-color: rgba(51, 51, 51, 0.8);
-    box-shadow: 0 3px 3px 3px rgba(51, 51, 51, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+    z-index: 4;
 }
 
 #homepage .header .logo {
     width: 126px;
     height: 65px;
-    padding: 5px 0 2px 51px;
+    padding: 3px 0 2px 51px;
     float: left;
 }
 
@@ -41,8 +47,8 @@
     height: auto;
     font-size: 22px;
     font-family: 'Microsoft YaHei';
-    font-weight: lighter;
-    
+    font-weight: normal;
+    color: rgb(102, 102, 102);
     margin-right: 30px;
     float: right;
 }
@@ -55,20 +61,45 @@
 
 #homepage .header ul li a {
     display: block;
-    height: 73px;
-    line-height: 73px;
+    height: 70px;
+    line-height: 70px;
     text-align: center;
     padding: 0 20px 0 20px;
-    color: white;
+    color: rgb(102, 102, 102);
     text-decoration: none;
 }
 
-#homepage .header  ul li a:hover {
-    background-color: rgba(51, 51, 51, 0.3);
+#homepage .header ul li a:hover {
+    color: white;
+    background-color: rgba(102, 102, 102, 0.8);
+    -moz-transition: all, linear, 300ms;
+    -o-transition: all, linear, 300ms;
+    -webkit-transition: all, linear, 300ms;
+    transition: all, linear, 300ms;
 }
 
-#homepage .header  ul li .nav_Home {
-    color: #F27A30;
+/*#homepage .header  ul li .nav_Home {
+    color: white;
+    background: rgba(102, 102, 102, 0.8);
+}*/
+
+#homepage .pointContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+#homepage .pointContainer .point {
+    position: absolute;
+    width: 52px;
+    height: 49px;
+    background-image: url(/images/point_2.png);
+    background-size: 52px 49px;
+    cursor: pointer;
+    z-index: 10;
 }
 
 #homepage .home_next {
@@ -105,6 +136,33 @@
 }
  
 /*members*/
+#members {
+    background-image: url(/images/member_bk.jpg);
+    background-size: 100% 100%;
+}
+
+#members .members_title_1 {
+    position: absolute;
+    width: 314px;
+    height: 78px;
+    top: 25px;
+    left: calc(50% - 307px);
+    background-image: url(/images/member_title_1.png);
+    opacity: 0;
+    z-index: 10;
+}
+
+#members .members_title_2 {
+    position: absolute;
+    width: 490px;
+    height: 46px;
+    top: 120px;
+    left: calc(50% - 38px);
+    background-image: url(/images/member_title_2.png);
+    opacity: 0;
+    z-index: 10;
+}
+
 #members .membersContainer {
     position: absolute;
     top: 35%;
@@ -145,7 +203,9 @@
     position: absolute;
     width: 170px;
     height: 170px;
+    border-radius: 95px;
     cursor: pointer;
+    /*box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.3);*/
 
 	-webkit-transition: .4s; 
 	-moz-transition: .4s;
@@ -197,7 +257,7 @@
     height: 170px;
     margin: 0 30px 30px 0;
     cursor: pointer;
-    background-color: white;
+    background-image: url(/images/headphotos/next_5.png);
     border-radius: 50%;
 }
 
@@ -268,13 +328,28 @@
 }
 
 /*achievement*/
+#achievement {
+    background-image: url(/images/achieve_BK.png);
+    background-size: 100% 100%;
+}
+
+#achievement .achieve_title {
+    position: absolute;
+    top: 28px;
+    width: 724px;
+    height: 156px;
+    left: calc(50% - 362px);
+    background-image: url(/images/achieve_title.png);
+    background-size: 724px 156px;
+    opacity: 0;
+}
+
 #achievement #windows {
     position: relative;
     width: 969px;
     height: 425px;
     border-bottom: solid 1px #EEEEEE;
-    background-color: white;
-    margin: 60px auto auto auto;
+    margin: 160px auto auto auto;
     overflow: hidden;
 }
 
@@ -327,7 +402,7 @@
     padding: 0;
     color: #5B5B5B;
     font-weight: normal;
-    font-family: 方正兰亭超细黑简体;
+    font-family: "FangZheng", "方正兰亭超细黑简体";
     font-size: 44px;
 }
 
@@ -358,39 +433,31 @@
 
 #achievement .text .like {
     width: 100%;
-    height: 84px;
+    height: 76px;
     opacity: 0
 }
 
 #achievement .text .likebuttun {
+    position: relative;
     cursor: pointer;
-    margin: 20px 10px;
-    width: 44px;
-    height: 44px;
-    border: solid 0 rgba(0, 0, 0, 0);
-    border-radius: 100%;
-    background-color: rgba(77, 166, 255, .6);
+    margin: 30px 10px 30px 0;
+    width: 16px;
+    height: 16px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAb1BMVEUAAACysrKysrKysrKzs7OysrKysrK/v7+0tLSzs7OysrKzs7Ozs7OysrKysrKzs7OysrKzs7OysrKysrKzs7OysrKysrKzs7O0tLS0tLSzs7OysrKysrKzs7Ozs7OysrK7u7uysrKysrKysrKzs7OQnUa/AAAAJHRSTlMAyPj67+33CG1wcoHYrrd2/o6Cvneg2oRVZsqISU4slg917pBxI1MgAAAAWklEQVR4Xk3KVQoEQQDE0Bp3X3fJ/c+4NDRs5e9BFKuzsZLVwuRuIHEPkBs7oP9zAVgVSgHNxAodgomRa3Oz097NRUd3etLZXV51cyd3PdxP6RX8Lj5Z2L/6ASWmEgRdsdE5AAAAAElFTkSuQmCC') /*/images/like_light.png*/;
+    background-repeat: no-repeat;
     float: left;
 }
 
-#achievement .text .likebuttun p {
+#achievement .text .like p {
     position: relative;
-    left: 6px;
-    top: 0;
-    padding: 0;
-    margin: 0;
-    font-size: 32px;
-    color: white;
+    margin-top: 27px;
+    font-size: 16px;
+    color:  #787F8C;
     font-family: 'Microsoft JhengHei';
-    /*width: 40px;
-    height: 40px;
-    background-image: url(/images/like.png);
-    background-position: 5px 3px;
-    background-repeat: no-repeat;
-    background-size: 30px 30px;*/
+    float: left;
 }
 
-#achievement .text .likenumbers {
+/*#achievement .text .likenumbers {
     position: relative;
     margin-left: 5px;
     top: 46px;
@@ -398,7 +465,7 @@
     color: #787F8C;
     font-size: 14px;
     font-family: 'Microsoft JhengHei';
-}
+}*/
 
 #achievement .text .honour {
     position: relative;
@@ -497,7 +564,7 @@
 #baiban img {
     position: absolute;
     right: 30px;
-    bottom: -350px;
+    bottom: -375px;
 }
 
 /*#windows:hover .baibanimg {
@@ -712,4 +779,16 @@ ul {
 .input_ideas:focus {
 	outline-color: #65B8EF;
 	border:4px solid #65B8EF ;
+}
+
+#contact #copyright {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: #EBE5DA;
+    font-family: 'Microsoft YaHei';
+    bottom: 0;
 }
