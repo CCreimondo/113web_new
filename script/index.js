@@ -311,14 +311,15 @@ function formSubmit() {
     sug.replace(prtn, " ");
 
     data.append(labels[4], sug);
-    //alert(sug);
     /* end FormData */
 
     var xhr = submitDataWithAjax("form.php", data);
     if (xhr == 1) {
         alert("Commit successfully.");
         /* set form-submit cookie */
-        CookieUtil.set("form", "true");
+        var theTime = new Date();
+        theTime.setDate(theTime.getDate() + 1); //Save one-day
+        CookieUtil.set("form", "true", theTime);
 
     } else {
         alert("Commit Failed. Try again, please.");
@@ -353,7 +354,9 @@ function likeSubmit(name) {
     }
     theTarget.innerHTML = "已赞(" + xhr + ")";
     /* set like-click cookie */
-    SubCookieUtil.set("like", name, "true");
+    var theTime = new Date();
+    theTime.setDate(theTime.getDate() + 1);  //Save one-day
+    SubCookieUtil.set("like", name, "true", theTime);
 
     return false;
 }
