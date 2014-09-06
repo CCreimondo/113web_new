@@ -102,13 +102,44 @@ body {
     z-index: 10;
 }
 
+#homepage .pointContainer .block {
+    position: absolute;
+    width: 310px;
+    height: 6px;
+    background-image: url(/images/homeblock.jpg);
+    background-size: 310px 6px;
+    z-index: 10;
+    opacity: 0;
+}
+
+#homepage .pointContainer .text_container {
+    position: absolute;
+    width: 305px;
+    height: 122px;
+    background-image: url(/images/container.png);
+    background-size: 305px 122px;
+    z-index: 10;
+    display: none;
+}
+
+#homepage .pointContainer .text_container p {
+    position: relative;
+    width: 273px;
+    height: 94px;
+    margin: 15px 20px 0 20px;
+    font-size: 19px;
+    line-height: 22px;
+    font-family: 'Microsoft YaHei';
+    color: #28323F;
+}
+
 #homepage .home_next {
     position: absolute;
     bottom: 20px;
     left: calc(50% - 61px);
     width: 122px;
     height: 72px;
-    background-image: url(/images/slideDown.fw.png);
+    background-image:  url(/images/slideDown.png);
     z-index: 4;
     opacity: 1;
     -moz-animation: next_anim 2s ease-out infinite;
@@ -273,7 +304,7 @@ body {
     transition-delay: .2s;
 }
 
-/*
+
 .test {
     position: relative;
     float: left;
@@ -282,18 +313,40 @@ body {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
     overflow: hidden;
-    -webkit-transform: rotateZ(720deg);
-    -moz-transform: rotateZ(720deg);
-    -o-transform: rotateZ(720deg);
-    -ms-transform: rotateZ(720deg);
-    transform: rotateZ(720deg);
+    
+    -webkit-transform: rotateY(720deg);
+    -moz-transform: rotateY(720deg);
+    -o-transform: rotateY(720deg);
+    -ms-transform: rotateY(720deg);
+    transform: rotateY(720deg);
 
     -moz-transition-duration: 800ms !important;
     -o-transition-duration: 800ms !important;
     -webkit-transition-duration: 800ms !important;
     transition-duration: 800ms !important;
+    -moz-animation: membersRotate .8s linear 1;
+    -o-animation: membersRotate .8s linear 1;
+    -webkit-animation: membersRotate .8s linear 1;
+    animation: membersRotate .8s linear 1;
 }
-*/
+
+@-moz-keyframes membersRotate {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-webkit-keyframes membersRotate {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes membersRotate {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
 
 #members .headphoto img {
     position: absolute;
@@ -329,7 +382,7 @@ body {
 
 /*achievement*/
 #achievement {
-    background-image: url(/images/achieve_BK.png);
+    background-image: url(/images/achieve_bk.png);
     background-size: 100% 100%;
 }
 
