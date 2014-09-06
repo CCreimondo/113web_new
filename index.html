@@ -3,6 +3,7 @@
 <head>
   <title></title>
   <script type="text/javascript">
+      /* Check browser */
       var sUserAgent = navigator.userAgent;
       var fAppVersion = parseFloat(navigator.appVersion);
       var isOprea = sUserAgent.indexOf("Opera") > -1;
@@ -226,7 +227,7 @@
             <div class="designer">设计者：张亚莹 完欣玥 何鑫 李佳维</div>
             <div class="detail">看见音乐 · 连通视听。CSong是一款聋儿音调辅助系统, 利用声音可视化帮助听障儿童看到声音，学习歌唱，为听障儿童提供低花费，可持续发音学习方案。通过用不同的色彩表示音调，将标准音以彩色曲线显示出来，以可视化的用户发音点与标准音作对比，使听障儿童简单方便的学习唱歌。CSong实现了声音可视化，反馈同步化，学习娱乐化，为聋儿带来多彩的音乐世界。</div>
             <div class="like">
-              <div class="likebuttun" onclick="return likeSubmit('csong');"> </div>
+              <div class="likebuttun" onclick="return likeSubmit('csong');"></div>
               <p class=".likenumbers">赞(555)</p>
             </div>
             <div class="honour"><span></span>2014 ImageCup 中国赛区二等奖</div>
@@ -308,7 +309,31 @@
     </div>
     <div id="copyright">Copyright&nbsp;&copy;&nbsp;Continue&nbsp;113.zero</div>
   </div>
-  <!--<script type="text/javascript">
+  <script type="text/javascript">
+      /* Set cookie to save like-click-history and formSubmit-history */
+      /* $begin set cookie */
+      if (SubCookieUtil.getAll("like") == null) {
+          console.log(SubCookieUtil.getAll("like"));
+          /*
+           * Can add new work - need to write into README
+           */
+          var likeObject = {
+              csong: "false",
+              sss: "false",
+              pigeon: "false",
+              wb: "false"
+          };
+
+          SubCookieUtil.setAll("like", likeObject);   //need to set expires time Date.now + 12H
+          console.log(typeof (likeObject));
+          console.log(likeObject.csong);
+          console.log(SubCookieUtil.get("like", "csong"));
+      }
+      if (CookieUtil.get("form") == null) {
+          CookieUtil.set("form", "false");            //need to set expires time Date.now + 12H
+      }
+      /* $end set cookie */
+
       /* Simple and crude! */
       if (XMLHttpRequest) {
           var xhr = new XMLHttpRequest();
@@ -320,10 +345,18 @@
       xhr.send();
       var xml = xhr.responseXML;
       var works = xml.getElementsByTagName("work");
-      var targets = document.getElementsByClassName("likenumbers");
+      var targets = document.getElementsByClassName("like");
+      var labelsT = ["csong", "sss", "pigeon", "wb"];
       for (var x = 0; x < 4; ++x) {
-          targets[x].innerHTML = works[x].childNodes[0].nodeValue;
+          var theTarget = targets[x].getElementsByClassName(".likenumbers")[0];
+          var theValue = works[x].childNodes[0].nodeValue;
+          var likeClickCookie = SubCookieUtil.get("like", labelsT[x]);
+          if (likeClickCookie == "true") {
+              theTarget.innerHTML = "已赞(" + theValue + ")";
+          } else {
+              theTarget.innerHTML = "赞(" + theValue + ")";
+          }
       }
-  </script>-->
+  </script>
 </body>
 </html>
