@@ -395,7 +395,66 @@
 
     ratate is failwoy
     */
+    $(".nav_members_1").click(function () {
+        $(".hp_1").addClass("test");
+        $(".hp_4").removeClass("test");
+        $(".hp_1").delay(799).animate({
+            opacity: '0'
+        }, 0);
+        $(".hp_2").delay(799).animate({
+            opacity: '1'
+        }, 0);
+        $(".photos_1").css("z-index", "9");
+        $(".photos_2").css("z-index", "10");
+        $(".photos_3").css("z-index", "9");
+        $(".photos_4").css("z-index", "9");
+    });
 
+    $(".nav_members_2").click(function () {
+        $(".hp_2").addClass("test");
+        $(".hp_1").removeClass("test");
+        $(".hp_2").delay(799).animate({
+            opacity: '0'
+        }, 0);
+        $(".hp_3").delay(799).animate({
+            opacity: '1'
+        }, 0);
+        $(".photos_1").css("z-index", "9");
+        $(".photos_2").css("z-index", "9");
+        $(".photos_3").css("z-index", "10");
+        $(".photos_4").css("z-index", "9");
+    });
+    $(".nav_members_3").click(function () {
+        $(".hp_3").addClass("test");
+        $(".hp_2").removeClass("test");
+        $(".hp_3").delay(799).animate({
+            opacity: '0'
+        }, 0);
+        $(".hp_4").delay(799).animate({
+            opacity: '1'
+        }, 0);
+        $(".photos_1").css("z-index", "9");
+        $(".photos_2").css("z-index", "9");
+        $(".photos_3").css("z-index", "9");
+        $(".photos_4").css("z-index", "10");
+    });
+    $(".nav_members_4").click(function () {
+        $(".hp_4").addClass("test");
+        $(".hp_3").removeClass("test");
+        $(".hp_4").delay(799).animate({
+            opacity: '0'
+        }, 0);
+        $(".hp_1").delay(799).animate({
+            opacity: '1'
+        }, 0);
+        $(".photos_1").css("z-index", "10");
+        $(".photos_2").css("z-index", "9");
+        $(".photos_3").css("z-index", "9");
+        $(".photos_4").css("z-index", "9");
+    });
+    /*
+
+    //淡出效果
     $(".nav_members_1").click(function () {
         $(".hp_1").animate({
             opacity: '0'
@@ -445,4 +504,5 @@
         $(".photos_3").css("z-index", "9");
         $(".photos_4").css("z-index", "9");
     });
+    */
 });
