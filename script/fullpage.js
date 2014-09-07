@@ -6,8 +6,8 @@
         navigation: true,
         afterLoad: function (anchorLink, index) {
             if (index == 2) {
-                var center_title_1 = $(window).width() / 2 - 157;
-                var center_title_2 = $(window).width() / 2 - 238;
+                var center_title_1 = $(window).width() / 2 - 158;
+                var center_title_2 = $(window).width() / 2 - 182;
                 $(".members_title_1").delay(100).animate({
                     left: [center_title_1, 'swing'],
                     opacity: '1'
@@ -61,16 +61,16 @@
                 $(".achieve_title").animate({
                     opacity: '1'
                 }, 300);
-                $("#CSong").find("img").animate({
+                $(".CSongimg").animate({
                     bottom: ['-45px', 'swing']
                 }, 400);
-                $("#SSS").find("img").animate({
+                $(".SSSimg").animate({
                     bottom: ['-54px', 'swing']
                 }, 400);
-                $("#Pigeon").find("img").animate({
+                $(".Pigeonimg").animate({
                     bottom: ['-290px', 'swing']
                 }, 400);
-                $("#baiban").find("img").animate({
+                $(".baibanimg").animate({
                     bottom: ['-375px', 'swing']
                 }, 400);
                 $(".text").delay(300).animate({
@@ -134,8 +134,8 @@
         },
         onLeave: function (index, direction) {
             if (index == '2') {
-                var title_1 = $(window).width() / 2 - 157 - 200;
-                var title_2 = $(window).width() / 2 - 238 + 200;
+                var title_1 = $(window).width() / 2 - 158 - 200;
+                var title_2 = $(window).width() / 2 - 182 + 200;
                 $(".members_title_1").delay(200).animate({
                     left: [title_1, 'swing'],
                     opacity: '0'
@@ -188,16 +188,16 @@
                 $(".achieve_title").animate({
                     opacity: '0'
                 }, 200);
-                $("#CSong").find("img").delay(0).animate({
+                $(".CSongimg").delay(0).animate({
                     bottom: '-395px'
                 }, 400);
-                $("#SSS").find("img").delay(0).animate({
+                $(".SSSimg").delay(0).animate({
                     bottom: ['-424px', 'swing']
                 }, 400);
-                $("#Pigeon").find("img").delay(0).animate({
+                $(".Pigeonimg").delay(0).animate({
                     bottom: ['-655px', 'swing']
                 }, 400);
-                $("#baiban").find("img").delay(0).animate({
+                $(".baibanimg").delay(0).animate({
                     bottom: ['-790px', 'swing']
                 }, 400);
                 $(".text").delay(0).animate({
