@@ -1,7 +1,4 @@
-﻿@font-face {
-    font-family: "FangZheng";
-    src: url(/font/方正兰亭超细黑简体.TTF);
-}
+﻿
 
 body {
 }
@@ -34,9 +31,12 @@ body {
 }
 
 #homepage .header .logo {
+    display: block;
     width: 126px;
     height: 65px;
-    padding: 3px 0 2px 51px;
+    margin: 3px 0 2px 51px;
+    background-image: url(/images/images.png);
+    background-position: 0 -150px;
     float: left;
 }
 
@@ -96,8 +96,8 @@ body {
     position: absolute;
     width: 52px;
     height: 49px;
-    background-image: url(/images/point_2.png);
-    background-size: 52px 49px;
+    background-image: url(/images/images.png);
+    background-position: -140px -150px;
     cursor: pointer;
     z-index: 10;
 }
@@ -106,8 +106,8 @@ body {
     position: absolute;
     width: 310px;
     height: 6px;
-    background-image: url(/images/homeblock.jpg);
-    background-size: 310px 6px;
+    background-image: url(/images/images.png);
+    background-position: 0 -125px;
     z-index: 10;
     opacity: 0;
 }
@@ -116,8 +116,8 @@ body {
     position: absolute;
     width: 305px;
     height: 122px;
-    background-image: url(/images/container.png);
-    background-size: 305px 122px;
+    background-image: url(/images/images.png);
+    background-position: -235px 0;
     z-index: 10;
     display: none;
 }
@@ -139,7 +139,8 @@ body {
     left: calc(50% - 61px);
     width: 122px;
     height: 72px;
-    background-image:  url(/images/slideDown.png);
+    background-image:  url(/images/images.png);
+    background-position: -100px 0;
     z-index: 4;
     opacity: 1;
     -moz-animation: next_anim 2s ease-out infinite;
@@ -178,7 +179,8 @@ body {
     height: 78px;
     top: 25px;
     left: calc(50% - 307px);
-    background-image: url(/images/member_title_1.png);
+    background-image: url(/images/images.png);
+    background-position: -235px -135px;
     opacity: 0;
     z-index: 10;
 }
@@ -189,7 +191,8 @@ body {
     height: 46px;
     top: 120px;
     left: calc(50% - 38px);
-    background-image: url(/images/member_title_2.png);
+    background-image: url(/images/images.png);
+    background-position: 0 -220px;
     opacity: 0;
     z-index: 10;
 }
@@ -287,7 +290,8 @@ body {
     height: 170px;
     margin: 0 30px 30px 0;
     cursor: pointer;
-    background-image: url(/images/headphotos/next_5.png);
+    background-image: url(/images/images.png);
+    background-position: 0 -265px;
     border-radius: 50%;
 }
 
@@ -332,22 +336,24 @@ body {
 @-moz-keyframes membersRotate {
     0% { opacity: 1; }
     50% { opacity: 0; }
-    100% { opacity: 1; }
+    100% { opacity: 0.5; }
 }
 @-webkit-keyframes membersRotate {
     0% { opacity: 1; }
     50% { opacity: 0; }
-    100% { opacity: 1; }
+    100% { opacity: 0.5; }
 }
 @keyframes membersRotate {
     0% { opacity: 1; }
     50% { opacity: 0; }
-    100% { opacity: 1; }
+    100% { opacity: 0.5; }
 }
 
 
 
-#members .headphoto img {
+#members .headphoto div,
+#members .headphoto img
+ {
     position: absolute;
     top: 0;
     left: 0;
@@ -366,10 +372,6 @@ body {
 
 }
 
-#members .headphoto .cover {
-    /*z-index: 10;*/
-}
-
 #members .headphoto .human {
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
@@ -378,6 +380,209 @@ body {
     transform: rotateY(-180deg);
     /*z-index: 9;*/
 }
+
+/*#members .photos_1 .cover,
+#members .photos_1 .human
+{
+    background-image: url(/images/headphotos/members_1.png);
+    background-repeat: no-repeat;
+}*/
+
+#members .photos_1 .row_1_1 .cover {
+    background-image: url(/images/headphotos/members_1.png);
+    background-position: 0 0;
+}
+#members .photos_1 .row_1_1 .human {    
+    background-image: url(/images/headphotos/members_1.png);
+    background-position: 0 170px;
+}
+
+#members .photos_1 .row_2_3 .cover {  
+    background-image: url(/images/headphotos/members_1.png);
+    background-position: 170px 0;
+}
+#members .photos_1 .row_2_3 .human {
+    background-image: url(/images/headphotos/members_1.png);
+    background-position: 170px 170px;
+}
+
+#members .photos_1 .row_2_2 .cover {
+    background-image: url(/images/headphotos/members_1.png);
+    background-position: 340px 0;
+}
+#members .photos_1 .row_2_2 .human {
+    background-position: 340px 170px;
+    background-image: url(/images/headphotos/members_1.png);
+}
+
+#members .photos_1 .row_2_1 .cover {
+    background-position: 510px 0;
+    background-image: url(/images/headphotos/members_1.png);
+}
+#members .photos_1 .row_2_1 .human {
+    background-position: 510px 170px;
+    background-image: url(/images/headphotos/members_1.png);
+}
+
+#members .photos_1 .row_1_4 .cover {
+    background-position: 680px 0;
+    background-image: url(/images/headphotos/members_1.png);
+}
+#members .photos_1 .row_1_4 .human {
+    background-position: 680px 170px;
+    background-image: url(/images/headphotos/members_1.png);
+}
+
+#members .photos_1 .row_1_3 .cover {
+    background-position: 850px 0;
+    background-image: url(/images/headphotos/members_1.png);
+}
+#members .photos_1 .row_1_3 .human {
+    background-position: 850px 170px;
+    background-image: url(/images/headphotos/members_1.png);
+}
+
+#members .photos_1 .row_1_2 .cover {
+    background-position: 1020px 0;
+    background-image: url(/images/headphotos/members_1.png);
+}
+#members .photos_1 .row_1_2 .human {
+    background-position: 1020px 170px;
+    background-image: url(/images/headphotos/members_1.png);
+}
+
+
+
+#members .photos_2 .row_1_1 .cover {
+    background-image: url(/images/headphotos/members_2.png);
+    background-position: 0 0;
+}
+#members .photos_2 .row_1_1 .human {    
+    background-image: url(/images/headphotos/members_2.png);
+    background-position: 0 510px;
+}
+
+#members .photos_2 .row_2_3 .cover {  
+    background-image: url(/images/headphotos/members_2.png);
+    background-position: 170px 0;
+}
+#members .photos_2 .row_2_3 .human {
+    background-image: url(/images/headphotos/members_2.png);
+    background-position: 170px 510px;
+}
+
+#members .photos_2 .row_2_2 .cover {
+    background-image: url(/images/headphotos/members_2.png);
+    background-position: 340px 0;
+}
+#members .photos_2 .row_2_2 .human {
+    background-position: 340px 510px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+
+#members .photos_2 .row_2_1 .cover {
+    background-position: 510px 0;
+    background-image: url(/images/headphotos/members_2.png);
+}
+#members .photos_2 .row_2_1 .human {
+    background-position: 510px 510px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+
+#members .photos_2 .row_1_4 .cover {
+    background-position: 680px 0;
+    background-image: url(/images/headphotos/members_2.png);
+}
+#members .photos_2 .row_1_4 .human {
+    background-position: 680px 510px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+
+#members .photos_2 .row_1_3 .cover {
+    background-position: 850px 0;
+    background-image: url(/images/headphotos/members_2.png);
+}
+#members .photos_2 .row_1_3 .human {
+    background-position: 850px 510px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+
+#members .photos_2 .row_1_2 .cover {
+    background-position: 1020px 0;
+    background-image: url(/images/headphotos/members_2.png);
+}
+#members .photos_2 .row_1_2 .human {
+    background-position: 1020px 510px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+
+
+
+#members .photos_3 .row_1_1 .cover {
+    background-image: url(/images/headphotos/members_2.png);
+    background-position: 0 340px;
+}
+#members .photos_3 .row_1_1 .human {    
+    background-image: url(/images/headphotos/members_2.png);
+    background-position: 0 170px;
+}
+
+#members .photos_3 .row_2_3 .cover {  
+    background-image: url(/images/headphotos/members_2.png);
+    background-position: 170px 340px;
+}
+#members .photos_3 .row_2_3 .human {
+    background-image: url(/images/headphotos/members_2.png);
+    
+    background-position: 170px 170px;
+}
+
+#members .photos_3 .row_2_2 .cover {
+    background-image: url(/images/headphotos/members_2.png);
+    background-position: 340px 340px;
+}
+#members .photos_3 .row_2_2 .human {
+    background-position: 340px 170px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+
+#members .photos_3 .row_2_1 .cover {
+    background-position: 510px 340px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+#members .photos_3 .row_2_1 .human {
+    background-position: 510px 170px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+
+#members .photos_3 .row_1_4 .cover {
+    background-position: 680px 340px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+#members .photos_3 .row_1_4 .human {
+    background-position: 680px 170px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+
+#members .photos_3 .row_1_3 .cover {
+    background-position: 850px 340px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+#members .photos_3 .row_1_3 .human {
+    background-position: 850px 170px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+
+#members .photos_3 .row_1_2 .cover {
+    background-position: 1020px 340px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+#members .photos_3 .row_1_2 .human {
+    background-position: 1020px 170px;
+    background-image: url(/images/headphotos/members_2.png);
+}
+
+
 
 /*achievement*/
 #achievement {
@@ -413,7 +618,8 @@ body {
     width: 50px;
     height: 100px;  
     opacity: 0;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAABkCAYAAADE6GNbAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwOC8xMi8xNKQtvWQAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAACdklEQVR4nN3cTWpCMRDA8b+6KC101XXBlcUb9Aje4J3x3cCTFFoQhO4KrgoWCmIXvharvo9MJsmMszZPf0ZIMplxtN/v8Rp1vbwDZsBqXPrDSOMIMQFwCTlFgEPIJQQ4g7QhwBGkCwFOIHW9nABTWhDgANIgnoDbrteZhgxFgGFICAKMQkIRYBAiQYAxiBQBhiAxCDACiUUAu+IQBcS6qhbbohAlxAYK/rQ0EVAIoo2AApAUCMgMSYWAjJCUCMgESY2ADJAcCEgMyYWAhJCcCEgEyY2ABBAFxHsoApQhCohNVS0+JAPVIEqItfT9VSClEaAAsYAAnRkpjoBISF0vpxhAQASkQTwIh6siQAixhgABxCICAiFWERAAsYyAgRDrCBgA8YCAHogXBHRAPCGgBeINARcgHhFwAvGKgCOIZwQ0EO8IgMl8/jzFOQIOMyJFfFpBwAHyJRx7X9dL6ZegHmPgFTlmagUzrqrFjivAjAGuAfO3jnjH/FvZPWPO9lpeMRd3vx4xrecRb5jOE6InTO+Z3QtmUBbFA2ZwXss6JijTaBkTnPu1ihFl4y1ixPcj1jBRN1aWMNF3iEeYb+EjVDAq19MNZgXshI+IxqgVDFTVYgu8UQijWsJREqNeVFMKk6TMqQQmWeFZbkzSUsCcmOTFmbkwWcplFTCPTR9ia2QrYI7ETIBZFyZrSXlKTPYi/1SYIm0XKTDFGmG0MUVbkzQxIwv/+dDX4t0TO+CleNcbqMzMjQkIxC+aZiAQhzEFATnGHARkGJMQCMeYhUAYxjQEhmPMQ2AYxgUE+jFuINCNcQWBdow7CFzGuITAOcbENj4mfs8jP7Nm2Iy/I7W0AAAAAElFTkSuQmCC') /*/images/pre.png*/;
+    background-image: url(/images/images.png);
+    background-position: 0 0;
 }
 
 #achievement .next {
@@ -424,7 +630,8 @@ body {
     width: 50px;
     height: 100px;
     opacity: 0;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAABkCAYAAADE6GNbAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwOC8xMi8xNKQtvWQAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAACIklEQVR4nN3XO04cQRAA0McQ2SmxJTKET+Aj7A3miuwJzFXIuACxI7QOWNmw7Gc+/amikpkJWlNPpa6uvnp4+P0TT+O4eZU4BnzD3Xb7eN07mTUx7J/pMcO799SY4eA7LeYQQlLMMQgJMacgJMOcg5AIcwlCEswUCAkwUyEEx8yBEBgzF0JQzBIIATEDXhauDYUZxnHz7AtgBvgKmH97JDvmw2bPjPnUtbJijrbfjJiT50g2zNkDMRPm4smeBTNpRMmAmTxrRcfMGhojY2ZPv1Exi8b4iJil95FwmMUQYmFWQYiDWQ2hCObH2hyKQFiNudluH2/X/L8YhL6YohD6YYpD6IOpAqE9phqEtpiqENphqkNog2kCoT6mGYS6mKYQ6mGaQ6iD6QKhPKYbhLKYrhDKYa52u12pnFbFPqGbhctfulekUHwPAVlZjT946g4pgRjHzWtXSCkEHbtWSQSdIKURdIDUQNAYUgtBQ0hNBI0gtRE0gLRAUBnSCkFFSEsElSCtEVSA9EBQGNILQUFITwSFIL0RFIBEQLASEgXBCkgkBAsh0RAsgEREMBMSFcEMSGQEEyHREUyAZEBwAZIFwRlIJgQnINkQHIFkRHAAyYrgHSQzgj0kOwKu7+9/3UqO4K0i6REsv4+EQrAMEg7BfEhIBPMgYRFMh4RGMA0SHsFlSAoE5yFpEJyGpEJwHJIOwWdISgQfIWkR/IekRvAGSY+Av2MQ0nsC00cKAAAAAElFTkSuQmCC') /*/images/next.png*/;
+    background-image: url(/images/images.png);
+    background-position: -50px 0;
 }
 
 #achievement #windows .container {
@@ -452,10 +659,11 @@ body {
     height: 47px;
     margin: 60px 0 0 0;
     padding: 0;
-    color: #5B5B5B;
-    font-weight: normal;
-    font-family: "FangZheng", "方正兰亭超细黑简体";
+    color: #A6A6A6;
+    font-weight: lighter;
+    font-family: 'Microsoft JhengHei UI';
     font-size: 44px;
+    line-height: 47px;
 }
 
 #SSS h1{
