@@ -6,21 +6,24 @@
 	         ||empty($_POST["email"])
 	 	 ||empty($_POST["qq"])
 	         ||empty($_POST["phone"])
-		 ||empty($_POST["sug"]);
+		 ||empty($_POST["sug"])
+		 ||empty($_POST["submitDate"]);
 	if ($isEmpty) { die(); }
 
+	if(!$submitDate = $_POST["submitDate"]) {$time = "none";}
         if(!$name = $_POST["name"]) {$name = "none";}
 	if(!$email = $_POST["email"]) {$email = "none";}
 	if(!$qq = $_POST["qq"]) {$qq = "0";}
 	if(!$phone = $_POST["phone"]) {$phone = "0";}
-	if(!$sug = $_POST["sug"]) {$sug = "none";}
+	if(!$sug = $_POST["sug"]) {$sug = "none";} 
 
 	$xmlDoc = new DOMDocument();
 	$xmlDoc->load("formInfo.xml");
 
 	$SECTION = $xmlDoc->getElementsByTagName("section")->item(0);
 	$PERSON = $xmlDoc->createElement("person");
-
+	$TIME = $xmlDoc->createElement("date", $submitDate);
+	$PERSON->appendChild($TIME);
 	$NAME = $xmlDoc->createElement("name", $name);
 	$PERSON->appendChild($NAME);
 	$EMAIL = $xmlDoc->createElement("email", $email);

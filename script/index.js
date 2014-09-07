@@ -237,6 +237,12 @@ function formSubmit() {
      */
     /* begin Formdata */
     var data = new FormData();
+
+    var theTime = new Date();
+    var theTime = theTime.toLocaleDateString() + " " + theTime.toLocaleTimeString();
+    console.log(theTime);
+    data.append("submitDate", theTime);
+
     var l_form = document.getElementById("l_form");
     var inputs = l_form.getElementsByClassName("lform");
     var x = undefined;
@@ -298,10 +304,10 @@ function formSubmit() {
     var theInput = r_form.getElementsByClassName("input_ideas")[0];
     var sug = theInput.value;
     /* Check whether empty */
-    if(sug == "") {
+    if (sug == "") {
         theInput.placeholder = "Reasons required!";
         resetBlank(theInput);
-        theInput.onfocus = function(){
+        theInput.onfocus = function () {
             this.placeholder = placeholder[4];
         }
         return false;
@@ -311,7 +317,6 @@ function formSubmit() {
     sug.replace(prtn, " ");
 
     data.append(labels[4], sug);
-    /* end FormData */
 
     var xhr = submitDataWithAjax("form.php", data);
     if (xhr == 1) {
