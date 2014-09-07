@@ -175,22 +175,22 @@ body {
 
 #members .members_title_1 {
     position: absolute;
-    width: 314px;
-    height: 78px;
+    width: 316px;
+    height: 81px;
     top: 25px;
-    left: calc(50% - 307px);
+    left: calc(50% - 358px);
     background-image: url(/images/images.png);
-    background-position: -235px -135px;
+    background-position: -225px -135px;
     opacity: 0;
     z-index: 10;
 }
 
 #members .members_title_2 {
     position: absolute;
-    width: 490px;
-    height: 46px;
+    width: 364px;
+    height: 18px;
     top: 120px;
-    left: calc(50% - 38px);
+    left: calc(50% + 18px);
     background-image: url(/images/images.png);
     background-position: 0 -220px;
     opacity: 0;
@@ -586,18 +586,15 @@ body {
 
 /*achievement*/
 #achievement {
-    background-image: url(/images/achieve_bk.png);
-    background-size: 100% 100%;
 }
 
 #achievement .achieve_title {
     position: absolute;
     top: 28px;
-    width: 724px;
-    height: 156px;
-    left: calc(50% - 362px);
+    width: 553px;
+    height: 145px;
+    left: calc(50% - 272px);
     background-image: url(/images/achieve_title.png);
-    background-size: 724px 156px;
     opacity: 0;
 }
 
@@ -779,13 +776,15 @@ body {
     transition-duration: 300ms;
 }*/
 
-#CSong img {
+#CSong .CSongimg {
     position: absolute;
     right: 0;
     bottom: -395px;
     /*bottom: -45px;*/
     width: 480px;
     height: 364px; 
+    background-image: url(/images/achieve.jpg);
+    background-position: -680px 0;
 }
 
 #CSong .text {
@@ -797,34 +796,42 @@ body {
     bottom: -25px;  
 }*/
 
-#SSS img {
+#SSS .SSSimg {
     position: absolute;
     right: 0;
     width: 480px;
     height: 406px;
     bottom: -54px;
+    background-image: url(/images/achieve.jpg);
+    background-position: -680px -365px;
 }
 
 /*#windows:hover .SSSimg{
     bottom: -34px;
 }*/
 
-#Pigeon img {
+#Pigeon .Pigeonimg {
     position: absolute;
     right: 20px;
     bottom: -290px;
     width: 340px;
     height: 639px;
+    background-image: url(/images/achieve.jpg);
+    background-position: -340px 0;
 }
 
 /*#windows:hover .Pigeonimg {
     bottom: -270px;
 }*/
 
-#baiban img {
+#baiban .baibanimg {
     position: absolute;
     right: 30px;
+    width: 340px;
     bottom: -375px;
+    height: 724px;
+    background-image: url(/images/achieve.jpg);
+    background-position: 0 0;
 }
 
 /*#windows:hover .baibanimg {
