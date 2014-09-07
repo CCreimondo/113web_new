@@ -34,7 +34,7 @@ body {
     display: block;
     width: 126px;
     height: 65px;
-    margin: 3px 0 2px 51px;
+    margin: 3px 0 2px 40px;
     background-image: url(/images/images.png);
     background-position: 0 -150px;
     float: left;
@@ -381,13 +381,6 @@ body {
     /*z-index: 9;*/
 }
 
-/*#members .photos_1 .cover,
-#members .photos_1 .human
-{
-    background-image: url(/images/headphotos/members_1.png);
-    background-repeat: no-repeat;
-}*/
-
 #members .photos_1 .row_1_1 .cover {
     background-image: url(/images/headphotos/members_1.png);
     background-position: 0 0;
@@ -533,7 +526,7 @@ body {
 }
 #members .photos_3 .row_2_3 .human {
     background-image: url(/images/headphotos/members_2.png);
-    
+    display: block;
     background-position: 170px 170px;
 }
 
@@ -581,7 +574,6 @@ body {
     background-position: 1020px 170px;
     background-image: url(/images/headphotos/members_2.png);
 }
-
 
 
 /*achievement*/
