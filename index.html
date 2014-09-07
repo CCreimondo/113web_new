@@ -305,7 +305,7 @@
           If you want to become one of us , please contact us by finishing the form
           .
         </span>
-        <form id="contact-form" action="#" method="post">
+        <form id="contact-form" action="" method="post">
           <div id="l_form">
             <input class="lform name" placeholder="Your Name" required type="text">
             <input class="lform email" placeholder="Your Email" required type="text">
@@ -337,9 +337,6 @@
           };
 
           SubCookieUtil.setAll("like", likeObject);   //need to set expires time Date.now + 12H
-          console.log(typeof (likeObject));
-          console.log(likeObject.csong);
-          console.log(SubCookieUtil.get("like", "csong"));
       }
       if (CookieUtil.get("form") == null) {
           CookieUtil.set("form", "false");            //need to set expires time Date.now + 12H
