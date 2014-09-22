@@ -7,7 +7,7 @@
     && !isOprea;
 
     function innerHtml() {
-        window.location.href = "attention.html";
+        window.location.href = "./attention.html";
     }
 
     if (isIE) {

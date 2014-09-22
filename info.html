@@ -18,7 +18,7 @@
             }
 
             var xmlRequest = getHTTPObject();
-            xmlRequest.open("GET", "formInfo.xml", false);
+            xmlRequest.open("GET", "./formInfo.xml", false);
             xmlRequest.send();
             var xmlDoc = xmlRequest.responseXML;
 
