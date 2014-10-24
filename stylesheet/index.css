@@ -35,7 +35,7 @@ body {
     width: 126px;
     height: 65px;
     margin: 3px 0 2px 40px;
-    background-image: url(/images/images.png);
+    background-image: url(../images/images.png);
     background-position: 0 -150px;
     float: left;
 }
@@ -96,7 +96,7 @@ body {
     position: absolute;
     width: 52px;
     height: 49px;
-    background-image: url(/images/images.png);
+    background-image: url(../images/images.png);
     background-position: -140px -150px;
     cursor: pointer;
     z-index: 10;
@@ -106,7 +106,7 @@ body {
     position: absolute;
     width: 310px;
     height: 6px;
-    background-image: url(/images/images.png);
+    background-image: url(../images/images.png);
     background-position: 0 -125px;
     z-index: 10;
     opacity: 0;
@@ -116,7 +116,7 @@ body {
     position: absolute;
     width: 305px;
     height: 122px;
-    background-image: url(/images/images.png);
+    background-image: url(../images/images.png);
     background-position: -235px 0;
     z-index: 10;
     display: none;
@@ -139,7 +139,7 @@ body {
     left: calc(50% - 61px);
     width: 122px;
     height: 72px;
-    background-image:  url(/images/images.png);
+    background-image:  url(../images/images.png);
     background-position: -100px 0;
     z-index: 4;
     opacity: 1;
@@ -169,7 +169,7 @@ body {
  
 /*members*/
 #members {
-    background-image: url(/images/member_bk.jpg);
+    background-image: url(../images/member_bk.jpg);
     background-size: 100% 100%;
 }
 
@@ -179,7 +179,7 @@ body {
     height: 81px;
     top: 25px;
     left: calc(50% - 358px);
-    background-image: url(/images/images.png);
+    background-image: url(../images/images.png);
     background-position: -225px -135px;
     opacity: 0;
     z-index: 10;
@@ -191,7 +191,7 @@ body {
     height: 18px;
     top: 120px;
     left: calc(50% + 18px);
-    background-image: url(/images/images.png);
+    background-image: url(../images/images.png);
     background-position: 0 -220px;
     opacity: 0;
     z-index: 10;
@@ -290,7 +290,7 @@ body {
     height: 170px;
     margin: 0 30px 30px 0;
     cursor: pointer;
-    background-image: url(/images/images.png);
+    background-image: url(../images/images.png);
     background-position: 0 -265px;
     border-radius: 50%;
 }
@@ -382,197 +382,197 @@ body {
 }
 
 #members .photos_1 .row_1_1 .cover {
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
     background-position: 0 0;
 }
 #members .photos_1 .row_1_1 .human {    
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
     background-position: 0 170px;
 }
 
 #members .photos_1 .row_2_3 .cover {  
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
     background-position: 170px 0;
 }
 #members .photos_1 .row_2_3 .human {
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
     background-position: 170px 170px;
 }
 
 #members .photos_1 .row_2_2 .cover {
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
     background-position: 340px 0;
 }
 #members .photos_1 .row_2_2 .human {
     background-position: 340px 170px;
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
 }
 
 #members .photos_1 .row_2_1 .cover {
     background-position: 510px 0;
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
 }
 #members .photos_1 .row_2_1 .human {
     background-position: 510px 170px;
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
 }
 
 #members .photos_1 .row_1_4 .cover {
     background-position: 680px 0;
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
 }
 #members .photos_1 .row_1_4 .human {
     background-position: 680px 170px;
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
 }
 
 #members .photos_1 .row_1_3 .cover {
     background-position: 850px 0;
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
 }
 #members .photos_1 .row_1_3 .human {
     background-position: 850px 170px;
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
 }
 
 #members .photos_1 .row_1_2 .cover {
     background-position: 1020px 0;
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
 }
 #members .photos_1 .row_1_2 .human {
     background-position: 1020px 170px;
-    background-image: url(/images/headphotos/members_1.png);
+    background-image: url(../images/headphotos/members_1.png);
 }
 
 
 
 #members .photos_2 .row_1_1 .cover {
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
     background-position: 0 0;
 }
 #members .photos_2 .row_1_1 .human {    
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
     background-position: 0 510px;
 }
 
 #members .photos_2 .row_2_3 .cover {  
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
     background-position: 170px 0;
 }
 #members .photos_2 .row_2_3 .human {
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
     background-position: 170px 510px;
 }
 
 #members .photos_2 .row_2_2 .cover {
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
     background-position: 340px 0;
 }
 #members .photos_2 .row_2_2 .human {
     background-position: 340px 510px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 
 #members .photos_2 .row_2_1 .cover {
     background-position: 510px 0;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 #members .photos_2 .row_2_1 .human {
     background-position: 510px 510px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 
 #members .photos_2 .row_1_4 .cover {
     background-position: 680px 0;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 #members .photos_2 .row_1_4 .human {
     background-position: 680px 510px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 
 #members .photos_2 .row_1_3 .cover {
     background-position: 850px 0;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 #members .photos_2 .row_1_3 .human {
     background-position: 850px 510px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 
 #members .photos_2 .row_1_2 .cover {
     background-position: 1020px 0;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 #members .photos_2 .row_1_2 .human {
     background-position: 1020px 510px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 
 
 
 #members .photos_3 .row_1_1 .cover {
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
     background-position: 0 340px;
 }
 #members .photos_3 .row_1_1 .human {    
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
     background-position: 0 170px;
 }
 
 #members .photos_3 .row_2_3 .cover {  
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
     background-position: 170px 340px;
 }
 #members .photos_3 .row_2_3 .human {
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
     display: block;
     background-position: 170px 170px;
 }
 
 #members .photos_3 .row_2_2 .cover {
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
     background-position: 340px 340px;
 }
 #members .photos_3 .row_2_2 .human {
     background-position: 340px 170px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 
 #members .photos_3 .row_2_1 .cover {
     background-position: 510px 340px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 #members .photos_3 .row_2_1 .human {
     background-position: 510px 170px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 
 #members .photos_3 .row_1_4 .cover {
     background-position: 680px 340px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 #members .photos_3 .row_1_4 .human {
     background-position: 680px 170px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 
 #members .photos_3 .row_1_3 .cover {
     background-position: 850px 340px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 #members .photos_3 .row_1_3 .human {
     background-position: 850px 170px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 
 #members .photos_3 .row_1_2 .cover {
     background-position: 1020px 340px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 #members .photos_3 .row_1_2 .human {
     background-position: 1020px 170px;
-    background-image: url(/images/headphotos/members_2.png);
+    background-image: url(../images/headphotos/members_2.png);
 }
 
 
@@ -586,7 +586,7 @@ body {
     width: 553px;
     height: 145px;
     left: calc(50% - 272px);
-    background-image: url(/images/achieve_title.png);
+    background-image: url(../images/achieve_title.png);
     opacity: 0;
 }
 
@@ -607,7 +607,7 @@ body {
     width: 50px;
     height: 100px;  
     opacity: 0;
-    background-image: url(/images/images.png);
+    background-image: url(../images/images.png);
     background-position: 0 0;
 }
 
@@ -619,7 +619,7 @@ body {
     width: 50px;
     height: 100px;
     opacity: 0;
-    background-image: url(/images/images.png);
+    background-image: url(../images/images.png);
     background-position: -50px 0;
 }
 
@@ -775,7 +775,7 @@ body {
     /*bottom: -45px;*/
     width: 480px;
     height: 364px; 
-    background-image: url(/images/achieve.jpg);
+    background-image: url(../images/achieve.jpg);
     background-position: -680px 0;
 }
 
@@ -794,7 +794,7 @@ body {
     width: 480px;
     height: 406px;
     bottom: -54px;
-    background-image: url(/images/achieve.jpg);
+    background-image: url(../images/achieve.jpg);
     background-position: -680px -365px;
 }
 
@@ -808,7 +808,7 @@ body {
     bottom: -290px;
     width: 340px;
     height: 639px;
-    background-image: url(/images/achieve.jpg);
+    background-image: url(../images/achieve.jpg);
     background-position: -340px 0;
 }
 
@@ -822,7 +822,7 @@ body {
     width: 340px;
     bottom: -375px;
     height: 724px;
-    background-image: url(/images/achieve.jpg);
+    background-image: url(../images/achieve.jpg);
     background-position: 0 0;
 }
 

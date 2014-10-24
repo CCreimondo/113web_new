@@ -9,7 +9,7 @@
     $name = $_POST["name"];
     
     $xmlDoc = new DOMDocument();
-    $xmlDoc->load("like.xml");
+    $xmlDoc->load("./like.xml");
     
     $theTargets = $xmlDoc->getElementsByTagName("work");
     foreach($theTargets AS $theTarget){
@@ -22,6 +22,6 @@
         break;
       }
     }
-    $xmlDoc->save("like.xml");
+    $xmlDoc->save("./like.xml");
     /* $end handle like data */
 ?>
