@@ -6,25 +6,27 @@
   <title>Continue技术小组</title>
   <script type="text/javascript">
       /* Check browser */
-      var sUserAgent = navigator.userAgent;
-      var fAppVersion = parseFloat(navigator.appVersion);
-      var isOprea = sUserAgent.indexOf("Opera") > -1;
-      var isIE = sUserAgent.indexOf("compatible") > -1
-      && sUserAgent.indexOf("MSIE") > -1
-      && !isOprea;
+      (function () {
+          var sUserAgent = navigator.userAgent;
+          var fAppVersion = parseFloat(navigator.appVersion);
+          var isOprea = sUserAgent.indexOf("Opera") > -1;
+          var isIE = sUserAgent.indexOf("compatible") > -1
+          && sUserAgent.indexOf("MSIE") > -1
+          && !isOprea;
 
-      function innerHtml() {
-          window.location.href = "./attention.html";
-      }
-
-      if (isIE) {
-          var reIE = new RegExp("MSIE (\\d+\\.\\d+)");
-          reIE.test(sUserAgent);
-          var FIEVersion = parseFloat(RegExp["$1"]);
-          if (FIEVersion <= 8) {
-              innerHtml();
+          function innerHtml() {
+              window.location.href = "./attention.html";
           }
-      }
+
+          if (isIE) {
+              var reIE = new RegExp("MSIE (\\d+\\.\\d+)");
+              reIE.test(sUserAgent);
+              var FIEVersion = parseFloat(RegExp["$1"]);
+              if (FIEVersion <= 8) {
+                  innerHtml();
+              }
+          }
+      })()
   </script>
   <!-- Websites statistics powered by bd -->
   <script>
@@ -336,58 +338,50 @@
   <script type="text/javascript">
       /* Set cookie to save like-click-history and formSubmit-history */
       /* $begin set cookie */
-      if (SubCookieUtil.getAll("like") == null) {
-          console.log(SubCookieUtil.getAll("like"));
-          /*
-           * Can add new work - need to write into README
-           */
-          var likeObject = {
-              csong: "false",
-              sss: "false",
-              pigeon: "false",
-              wb: "false"
-          };
+      (function(){
+          if (SubCookieUtil.getAll("like") == null) {
+              console.log(SubCookieUtil.getAll("like"));
+              /*
+               * Can add new work - need to write into README
+               */
+              var likeObject = {
+                  csong: "false",
+                  sss: "false",
+                  pigeon: "false",
+                  wb: "false"
+              };
 
-          SubCookieUtil.setAll("like", likeObject);   //need to set expires time Date.now + 12H
-      }
-      if (CookieUtil.get("form") == null) {
-          CookieUtil.set("form", "false");            //need to set expires time Date.now + 12H
-      }
-      /* $end set cookie */
-
-      /* Simple and crude! */
-      if (XMLHttpRequest) {
-          var xhr = new XMLHttpRequest();
-      } else {
-          //IE version >= IE7
-          var xhr = new ActiveXObject("Msxml2.XMLHTTP");
-      }
-      xhr.open("GET", "./like.xml", false);
-      xhr.send();
-      var xml = xhr.responseXML;
-      var works = xml.getElementsByTagName("work");
-      var targets = document.getElementsByClassName("like");
-      var labelsT = ["csong", "sss", "pigeon", "wb"];
-      for (var x = 0; x < 4; ++x) {
-          var theTarget = targets[x].getElementsByClassName(".likenumbers")[0];
-          var theValue = works[x].childNodes[0].nodeValue;
-          var likeClickCookie = SubCookieUtil.get("like", labelsT[x]);
-          if (likeClickCookie == "true") {
-              theTarget.innerHTML = "已赞(" + theValue + ")";
-          } else {
-              theTarget.innerHTML = "赞(" + theValue + ")";
+              SubCookieUtil.setAll("like", likeObject);   //need to set expires time Date.now + 12H
           }
-      }
+          if (CookieUtil.get("form") == null) {
+              CookieUtil.set("form", "false");            //need to set expires time Date.now + 12H
+          }
+          /* $end set cookie */
+
+          /* Simple and crude! */
+          if (XMLHttpRequest) {
+              var xhr = new XMLHttpRequest();
+          } else {
+              //IE version >= IE7
+              var xhr = new ActiveXObject("Msxml2.XMLHTTP");
+          }
+          xhr.open("GET", "./like.xml", false);
+          xhr.send();
+          var xml = xhr.responseXML;
+          var works = xml.getElementsByTagName("work");
+          var targets = document.getElementsByClassName("like");
+          var labelsT = ["csong", "sss", "pigeon", "wb"];
+          for (var x = 0; x < 4; ++x) {
+              var theTarget = targets[x].getElementsByClassName(".likenumbers")[0];
+              var theValue = works[x].childNodes[0].nodeValue;
+              var likeClickCookie = SubCookieUtil.get("like", labelsT[x]);
+              if (likeClickCookie == "true") {
+                  theTarget.innerHTML = "已赞(" + theValue + ")";
+              } else {
+                  theTarget.innerHTML = "赞(" + theValue + ")";
+              }
+          }
+      })()
   </script>
-  <!-- Websits statistics -->
-  <!--
-  <script type="text/javascript">
-  var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-  document.write(unescape("%3Cscript src='" 
-      + _bdhmProtocol 
-      + "hm.baidu.com/h.js%3F903b00f65f98cadac58936bc2d4994fc' 
-      type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  -->
 </body>
 </html>

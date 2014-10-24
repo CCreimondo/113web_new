@@ -1,4 +1,5 @@
 ﻿// JavaScript Document
+(function () {
     var sUserAgent = navigator.userAgent;
     var fAppVersion = parseFloat(navigator.appVersion);
     var isOprea = sUserAgent.indexOf("Opera") > -1;
@@ -18,3 +19,4 @@
             innerHtml();
         }
     }
+})()
