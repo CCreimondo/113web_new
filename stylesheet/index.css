@@ -351,8 +351,7 @@ body {
 
 
 
-#members .headphoto div,
-#members .headphoto img
+#members .headphoto div
  {
     position: absolute;
     top: 0;
@@ -362,6 +361,16 @@ body {
     -webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
+}
+
+#members .photos_3 .joinus 
+ {
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    width: 170px;
+    height: 170px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #members .headphoto:hover .human {
@@ -378,7 +387,7 @@ body {
     -o-transform: rotateY(-180deg);
     -ms-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
-    /*z-index: 9;*/
+    z-index: 9;
 }
 
 #members .photos_1 .row_1_1 .cover {
