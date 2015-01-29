@@ -1,4 +1,5 @@
 ﻿// JavaScript Document
+(function () {
     var sUserAgent = navigator.userAgent;
     var fAppVersion = parseFloat(navigator.appVersion);
     var isOprea = sUserAgent.indexOf("Opera") > -1;
@@ -7,7 +8,7 @@
     && !isOprea;
 
     function innerHtml() {
-        window.location.href = "attention.html";
+        window.location.href = "../attention.html";
     }
 
     if (isIE) {
@@ -18,3 +19,4 @@
             innerHtml();
         }
     }
+})()

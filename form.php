@@ -18,7 +18,7 @@
 	if(!$sug = $_POST["sug"]) {$sug = "none";} 
 
 	$xmlDoc = new DOMDocument();
-	$xmlDoc->load("formInfo.xml");
+	$xmlDoc->load("./formInfo.xml");
 
 	$SECTION = $xmlDoc->getElementsByTagName("section")->item(0);
 	$PERSON = $xmlDoc->createElement("person");
@@ -37,6 +37,6 @@
 
 	$SECTION->appendChild($PERSON);
 
-	$xmlDoc->save("formInfo.xml");
+	$xmlDoc->save("./formInfo.xml");
 	echo 1;
 ?>

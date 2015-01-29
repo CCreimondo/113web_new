@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
 <head>
+    <meta charset="utf-8" />
     <title>Form Submit Check</title>
     <script type="text/javascript">
         "use strict";
@@ -18,7 +19,7 @@
             }
 
             var xmlRequest = getHTTPObject();
-            xmlRequest.open("GET", "formInfo.xml", false);
+            xmlRequest.open("GET", "./formInfo.xml", false);
             xmlRequest.send();
             var xmlDoc = xmlRequest.responseXML;
 
