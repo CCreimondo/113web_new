@@ -15,7 +15,7 @@
           && !isOprea;
 
           function innerHtml() {
-              window.location.href = "./attention.html";
+              window.location.href = "attention.html";
           }
 
           if (isIE) {
@@ -30,32 +30,31 @@
   </script>
   <style>
     .homepageBg {
-        background-image: url(./images/homepageBg.jpg);
+        background-image: url(images/homepageBg.jpg);
     }
     .home_next {
-        background-image: url(./images/homepageBg.jpg);
+        background-image: url(images/homepageBg.jpg);
     }
     .hp_4 {
-        background-image: url(./images/headphotos/members_1.png);
+        background-image: url(images/headphotos/members_1.png);
     }
   </style>
-  <!--<script src="script/checkBrowser.js"></script>-->
-  <link rel="stylesheet" href="./stylesheet/jquery.fullPage.css" />
-  <link rel="stylesheet" href="./stylesheet/index.css" />
-  <script src="./script/index.js"></script>
+  <link rel="stylesheet" href="stylesheet/jquery.fullPage.css" />
+  <link rel="stylesheet" href="stylesheet/index.css" />
+  <script src="script/index.js"></script>
   <script src="script/jquery-1.8.3.min.js"></script>
-  <script src="./script/jquery-ui-1.10.3.min.js"></script>
-  <script src="./script/jquery.fullPage.min.js"></script>
-  <script src="./script/fullpage.js"></script>
-  <script src="./script/homepagePos.js"></script>
-  <link rel="shortcut icon" href="./images/logo.png">
+  <script src="script/jquery-ui-1.10.3.min.js"></script>
+  <script src="script/jquery.fullPage.min.js"></script>
+  <script src="script/fullpage.js"></script>
+  <script src="script/homepagePos.js"></script>
+  <link rel="shortcut icon" href="images/logo.png">
 </head>
 <body>
   <div id="homepage" class="section">
     <div class="homepageContainer">
-      <img src="./images/homepageBg.jpg" id="homepageBg" />
+      <img src="images/homepageBg.jpg" id="homepageBg" />
       <div class="header">
-        <a class="logo" href="./index.html"></a>
+        <a class="logo" href="index.html"></a>
         <nav class="nav_homepage">
           <ul>
             <li><a class="nav_Home" href="#page1">HOME</a></li>
@@ -355,7 +354,7 @@
               //IE version >= IE7
               var xhr = new ActiveXObject("Msxml2.XMLHTTP");
           }
-          xhr.open("GET", "./like.xml", false);
+          xhr.open("GET", "like.xml", false);
           xhr.send();
           var xml = xhr.responseXML;
           var works = xml.getElementsByTagName("work");
