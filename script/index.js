@@ -318,7 +318,7 @@ function formSubmit() {
 
     data.append(labels[4], sug);
 
-    var xhr = submitDataWithAjax("./form.php", data);
+    var xhr = submitDataWithAjax("form.php", data);
     if (xhr == 1) {
         alert("Commit successfully.");
         /* set form-submit cookie */
@@ -347,7 +347,7 @@ function likeSubmit(name) {
     var data = new FormData();
     data.append("name", name);
 
-    var xhr = submitDataWithAjax("./like.php", data);
+    var xhr = submitDataWithAjax("like.php", data);
     //More detail code write here
     var targets = document.getElementsByClassName("like");
     var labels = ["csong", "sss", "pigeon", "wb"];

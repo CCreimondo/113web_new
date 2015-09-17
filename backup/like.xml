@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- First time to use xml, am not sure there isn't some shocking code -->
-<like>
-  <work name="csong">70</work>
-  <work name="sss">40</work>
-  <work name="pigeon">32</work>
-  <work name="wb">39</work>
-</like>

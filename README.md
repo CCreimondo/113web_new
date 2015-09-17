@@ -1,4 +1,2 @@
-113web_new
+Home page for continue
 ==========
-- [www.113continue.com](http://www.113continue.com)
-- [dev.113continue.com](http://dev.113continue.com)

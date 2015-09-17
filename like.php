@@ -22,6 +22,6 @@
         break;
       }
     }
-    $xmlDoc->save("./like.xml");
+    $xmlDoc->save("like.xml");
     /* $end handle like data */
 ?>
